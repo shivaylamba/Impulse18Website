@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iosd mait fest</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+
+ <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Events</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Sponsors</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">IOSD MAIT Team</a> </li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact Us!</a></li>
+                    </ul>
+            </nav>
+        </div>
+<h2> logo and some intro...</h2>
+<section class = "intro">
+
+<h1>Coming in...</h1>
+
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+</section>
+
+<section class = "events">
+
+<h2>Events</h2>
+<!-- 1 event -->
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+			<ol>
+				<li>info</li>
+				<li>about</li>
+				<li>first event</li>
+			</ol>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<input id = "register-button" type="button" name="register" value = "register">
+		</div>
+	</div>
+
+	<!-- 2 event -->
+</div>
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+			<ol>
+				<li>info</li>
+				<li>about</li>
+				<li>second event</li>
+			</ol>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<input id = "register-button" type="button" name="register" value = "register">
+		</div>
+	</div>
+</div>
+
+<!-- 3 event -->
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+			<ol>
+				<li>info</li>
+				<li>about</li>
+				<li>third event</li>
+			</ol>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<input id = "register-button" type="button" name="register" value = "register">
+		</div>
+	</div>
+</div>
+
+</section>
+<!-- <nav>
+	<a href="#">hello</a>
+	<a href="#">hi</a>
+	<a href="#">hey!</a>
+	</nav> -->
+<section class = "sponsors">
+
+
+</section>
+
+<!-- <div class="dropdown-menu">
+  <form class="px-4 py-3">
+    <div class="form-group">
+      <label for="exampleDropdownFormEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleDropdownFormPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input">
+        Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">New around here? Sign up</a>
+  <a class="dropdown-item" href="#">Forgot password?</a>
+</div>
+
+ -->
+ <h4>IOSD MAIT Team</h4>
+
+  <section class="section-features">
+                
+<h2>Core team</h2>
+
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id="names">Deepanshi Bansal</span></h3>
+                            <p class="feature-box__text">
+                                <span id="info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div  class="feature-box">
+                            <i class="feature-box__icon icon-basic-compass"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">Sparsh Wadhwa</span></h3>
+                            <p class="feature-box__text">
+                                 <span id = "info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-map"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">Saurabh aggarwal</span></h3>
+                             <p class="feature-box__text">
+                                 <span id = "info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <h4>Logistic team</h4>
+                  <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-heart"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">rajat gupta</span></h3>
+                            <p class="feature-box__text">
+                                 <span id = "info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+                 
+                       
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">Deepali singh</span></h3>
+                            <p class="feature-box__text">
+                                <span id = "info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+                  
+                    
+                      
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">more names</span></h3>
+                            <p class="feature-box__text">
+                                <span id = "info">put my name if core ke naam<br> khatam ho gaye toh.. :p</span></br></span>
+                            </p>
+                        </div>
+                    </div>
+                     </div>
+
+                       <h4>Dev-Ops Team</h4>
+              
+                       <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small"><span id = "names">more names</span></h3>
+                            <p class="feature-box__text">
+                                <span id = "info">blah blah<br>blah blah</br></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h4>Sponsors</h4>
+           <a href="https://get.tech" target="_blank"> <img src="/home/sidkathuria14/Desktop/IOSDMAITTechfestWebsite/img/tech.png" ></a>
+
+<script type="text/javascript" src = "script.js"></script>
+</body>
+</html>
