@@ -285,3 +285,10 @@ margin-top: 40px;
 #info{
 	color: #818181;
 }
+.form-control{
+  margin: 0px auto;
+width: 400px;
+}
+#formGroupExampleInputContent{
+  grid-row: 4;
+}
