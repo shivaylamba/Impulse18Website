@@ -616,7 +616,7 @@ section h3 {
 /*
 	3. Logo, navigation bar and menu
 */
-nav.navbar {
+/* nav.navbar {
   transition: background .5s ease;
   height: 90px;
 }
@@ -627,8 +627,7 @@ nav.navbar {
 }
 nav.navbar.dark {
   background: rgba(4, 26, 57, 0.9);
-/*background: #B6006C;*/
-/*opacity: 0.7;*/
+
 }
 nav.navbar.dark #navbar {
   border-bottom: 0 none !important;
@@ -668,12 +667,9 @@ nav.navbar #navbar {
   }
 }
 nav.navbar .logo {
-  /*width: 100px;
-  height: 30px;*/
-  /*padding: 26px 0 0px;*/
+ 
   margin-top: 6px;
- /* width: 240px;
-  height: 80px;*/
+ 
   display: block;
   position: absolute;
   z-index: 6001;
@@ -749,8 +745,7 @@ nav.navbar .navbar-toggle.collapsed .bottom-bar {
     background: #fff;
   }
   nav.navbar .logo {
-   /* width: 100px;
-    height: 30px;*/
+   
     margin-left: 15px;
     margin-top: -5px;
   }
@@ -792,7 +787,7 @@ nav.navbar .navbar-toggle.collapsed .bottom-bar {
   nav.navbar ul.navbar-nav > li:last-child {
     border-bottom: 0;
   }
-}
+} */
 #festname{
   font-size: 50px;
   color: #AC3A6D;
@@ -844,7 +839,7 @@ nav.navbar .navbar-toggle.collapsed .bottom-bar {
   font-size: 80px;
   /*margin-top: 10px;*/
 }
-#slider-full .calendar .day {
+#slider-full .calendar {
   display: block;
   color: #fff;
   z-index: 3005;
@@ -854,7 +849,7 @@ nav.navbar .navbar-toggle.collapsed .bottom-bar {
   line-height: 1em;
   margin-top: -12px;
 }
-#slider-full .calendar .month {
+#slider-full .calendar  {
   display: block;
   /*color: #000000;*/
   color: #AC3A6D;

@@ -1,0 +1,153 @@
+/* NAVBAR SECTION */
+.navbar{
+    background-color: rgb(4,4,4);
+    opacity: 0.85;
+}
+
+.nav-link{
+    color: white;
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+.nav-link:hover{
+    color: rgb(243, 47, 73);
+}
+
+.nav-item{
+    margin-right: 15px;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+/* //NAVBAR SECTION */
+
+/* HERO SECTION */
+.canvas-container{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+}
+
+canvas{
+    background: url(https://jackrugile.com/lab/fireworks-v2/images/bg.jpg);
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#skyline {
+    background: url(https://jackrugile.com/lab/fireworks-v2/images/skyline.png) repeat-x 50% 0;
+    bottom: 0;
+    height: 135px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -7;
+}
+
+#mountains1 {
+    background: url("../images/mountains11.png") repeat-x 40% 0;
+    bottom: 0;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -9;
+}
+
+#mountains2 {
+    background: url("../images/mountains22.png") repeat-x 30% 0;
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -8;
+}
+
+#main_header{
+    margin-top: 0%;
+    position: absolute;
+    top: 40%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15vmin;
+}
+
+.day{
+    position: absolute;
+    top:55%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(71, 233, 219);
+    font-weight: 600;
+    font-size: 13vmin;
+}
+
+.month{
+    position: absolute;
+    top:68%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(241, 121, 65);
+    font-weight: 500;
+    font-size: 8vmin;
+}
+
+/* //HERO SECTION //
+
+/* AGENDA SECTION */
+
+.agenda{
+    background-image: url('../images/spiration-dark.png');
+    background-repeat: repeat;
+}
+
+#agenda{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: 0px;
+    font-size: 13vmin;
+}
+
+.march-9,.march-10{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: 0px;
+    font-size: 7vmin;
+}
+
+.vtimeline-date{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.vtimeline-content{
+    padding: 20px;
+}
+
+#timeline h3, #timeline1 h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* //AGENDA SECTION */
+
