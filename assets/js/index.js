@@ -2,7 +2,6 @@ var canvas = document.querySelector('canvas');
 canvas.height = window.innerHeight;
 canvas.width = $('body').innerWidth();
 
-
 //var MAX_LEFT = Math.floor((20/100) * canvas.width);
 //var MAX_RIGHT = canvas.width - MAX_LEFT;
 //var MAX_TOP = Math.floor((40/100)*canvas.height);
