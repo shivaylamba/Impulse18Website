@@ -39,7 +39,7 @@
 
 canvas{
     background: url(https://jackrugile.com/lab/fireworks-v2/images/bg.jpg);
-    z-index: -10;
+    z-index: -11;
     position: absolute;
     top: 0;
     left: 0;
@@ -85,7 +85,7 @@ canvas{
     font-size: 15vmin;
 }
 
-.day{
+.day-header{
     position: absolute;
     top:55%;
     font-family: 'Montserrat', sans-serif;
@@ -105,6 +105,65 @@ canvas{
 
 /* //HERO SECTION //
 
+/* TIMER SECTION */
+
+.timer{
+    width: 80%;
+    background-color: #BB5758;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0;
+    border-width: 4px;
+    border-color: #BB5758;
+    border-style: solid;
+    position: absolute;
+    float: none;
+    left: 10%;
+}
+
+.launch{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    line-height: 13.6px;
+    color: black;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+.timer .col{
+    margin: 0;
+}
+
+.day,.hour,.minute,.second{
+    color: #E5C8CA;
+    font-family: 'Oswald', sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    display: inline-block;
+    width : 65px;;
+}
+
+.day-content,.hour-content,.minute-content,.second-content{
+    color: #2A323B;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.timer-row{
+    width: 70%;
+    margin: auto;
+}
+
+
+
+/* //TIMER SECTION */
+
 /* AGENDA SECTION */
 
 .agenda{
@@ -112,7 +171,7 @@ canvas{
     background-repeat: repeat;
 }
 
-#agenda{
+#agenda,.teaser{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     padding-top: 30px;
@@ -120,6 +179,7 @@ canvas{
     display: block;
     margin-left: 0px;
     font-size: 13vmin;
+    padding-top: 150px;
 }
 
 .march-9,.march-10{
@@ -150,4 +210,209 @@ canvas{
 }
 
 /* //AGENDA SECTION */
+
+/* TEASER SECTION */
+.teaser{
+    color: #191919;
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+video{
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 50px;
+}
+
+.parallax-container{
+    background-image: url('../images/01-01.jpg');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    background-attachment: fixed;
+    background-position: center;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    
+}
+/* //TEASER SECTION */
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:1140px) and (max-width: 1219px) {
+    .timer-row{
+        width: 75%;
+    }
+}
+
+@media screen  and (min-width:990px) and (max-width: 1139px) {
+    .timer-row{
+        width: 75%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 60px;
+        width : 60px;;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 15px;
+        
+    }
+}
+
+@media screen  and (min-width:900px) and (max-width: 989px) {
+    .timer-row{
+        width: 80%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 55px;
+        width : 55px;;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 15px;
+        
+    }
+}
+
+@media screen  and (min-width:775px) and (max-width: 899px) {
+    .timer{
+        width: 85%;
+        left: 7.5%;
+    }
+    .timer-row{
+        width: 80%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 50px;
+        width : 50px;;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 13px;
+        
+    }
+}
+
+@media screen and (min-width:635px)  and (max-width: 774px) {
+    .timer{
+        width: 87%;
+        left: 6.5%;
+    }
+    .timer-row{
+        width: 85%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 50px;
+        width : 50px;;
+    }
+
+    .col{
+        padding: 0 5px;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 13px;
+        
+    }
+}
+
+@media screen and (min-width:520px) and (max-width: 634px) {
+    .timer{
+        width: 90%;
+        left: 5%;
+    }
+    .timer-row{
+        width: 90%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 45px;
+        width : 45px;;
+    }
+
+    .col{
+        padding: 0;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 13px;
+        
+    }
+}
+
+@media screen and (min-width:470px) and (max-width: 519px) {
+    .timer{
+        width: 90%;
+        left: 5%;
+    }
+    .timer-row{
+        width: 100%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 45px;
+        width : 45px;;
+    }
+
+    .col{
+        padding: 0;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 13px;
+        
+    }
+}
+
+@media screen  and (max-width: 469px) {
+    .timer{
+        width: 97%;
+        left: 1.5%;
+    }
+    .timer-row{
+        width: 100%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 45px;
+        width : 45px;
+    }
+
+    .col{
+        padding: 0;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 13px;
+        
+    }
+}
+
+@media screen  and (max-width: 411px) {
+    .timer{
+        width: 99%;
+        left: 0.5%;
+    }
+    .timer-row{
+        width: 97%;
+    }
+    .day,.hour,.minute,.second{
+        font-size: 40px;
+        width : 40px;
+    }
+
+    .col{
+        padding: 0;
+    }
+    
+    .day-content,.hour-content,.minute-content,.second-content{
+        font-size: 10px;
+        
+    }
+}
+
+
+
+
 
