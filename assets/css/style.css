@@ -1191,11 +1191,11 @@ nav.navbar .navbar-toggle.collapsed .bottom-bar {
 /*
 	7. Video block
 */
-#video {
-/*background: url("../images/form-bg.png");*/
+/* #video {
+/*background: url("../images/form-bg.png");
   height: 700px;
   z-index: 5;
-  /*padding: 106px 0;*/
+  /*padding: 106px 0;
   position: relative;
   width: 100%;
 
@@ -1208,12 +1208,12 @@ font-size: 60px;
 }
 #teaser{
   text-align: center;
-  /*margin-bottom: 300px;*/
+  /*margin-bottom: 300px;
   margin-top: -220px;
   margin-left: 120px;
-  /*margin-right: 0px auto;*/
+  /*margin-right: 0px auto;
   padding: 40px;
-  /*controls: true;*/
+  /*controls: true;
 
 }
 #video h3 {
@@ -1247,9 +1247,9 @@ font-size: 60px;
   bottom: 0;
   width: 100%;
   height: 100%;
-  /*background: url("../images/video-play.png") no-repeat 50% 50%;*/
+  /*background: url("../images/video-play.png") no-repeat 50% 50%;
   z-index: 4000;
-}
+} */
 /*
 	8. team 3-colum block
 */
@@ -2156,7 +2156,7 @@ height: 290px;
     margin-bottom: 30px;
   }
 }
-
+/*
 .days,.hours,.minutes,.seconds{
 margin-left: 60px;
 width: 140px;
@@ -2164,8 +2164,8 @@ text-align: center;
 float: left;
 height: 80px;
 border-radius: 15px;
-/*background: #000000;  */
-}
+/*background: #000000;  
+} */
 
 
 .timer{
