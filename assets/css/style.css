@@ -1255,13 +1255,14 @@ font-size: 60px;
 */
 #team {
   padding: 90px 0;
-  background: url("../images/form-bg.png");
+  background: url("../images/dark-pattern.gif");
   background-repeat: inherit;
 /*background: -webkit-linear-gradient(135deg, #1b1f83 0%, #972461 100%);*/
 
 }
 #team h3 {
   margin-bottom: 30px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 #team .item {
   background: #fff;
@@ -1962,9 +1963,11 @@ img.rounded {
   position: relative;
   top: 20px;
 }
+
+
 #meetteam{
   color: white;
-  margin-top: 0px;
+  margin-top: -10px;
   font-size: 55px;
   font-weight: 600px;
 }
@@ -1975,7 +1978,7 @@ img.rounded {
   width: 200px;
   /*border-style: solid;*/
   /*border-width: 8px;*/
- 
+  transition: .25s ease;
 
 
 }
@@ -1983,6 +1986,7 @@ img.rounded {
 border-width: 3px;
  border-color: #AC3A6D;
  /*border-style: solid;*/
+ border-radius: 30px;
 
  padding: 8px;
 }
@@ -1995,12 +1999,15 @@ border-width: 3px;
   /*border-style: solid;*/
   /*border-width: 8px;*/
   border-color: #AC3A6D;
+  transition: .25s ease;
 }
 #photo_vinay:hover{
+/*border-width: 3px;
+ border-color: #AC3A6D;*/
+ /*border-style: solid;*/
+border-radius: 30px;
 border-width: 3px;
  border-color: #AC3A6D;
- /*border-style: solid;*/
-
  padding: 8px;
 }
 
@@ -2008,18 +2015,21 @@ border-width: 3px;
 .photorow{
  float: left;
   margin-top: 0px;
+  width: 100%;
+  margin: 0 auto;
 }
 #personname{
   color: white;
   font-size: 20px;
   margin-top: 0px;
   margin-left: 0px;
- 
+  font-family: 'Josefin Sans', sans-serif; 
   /*text-align: center;*/
 }
 #personname:hover{
 color: #AC3A6D;
 cursor: auto;
+
 }
 #personname_vinay{
   color: white;
@@ -2041,12 +2051,30 @@ cursor: auto;
   /*text-align: center;*/
 
 }
+
+.empty {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 430px) {
+  .empty {
+    display: none;
+  }
+} 
+
+/*@media (max-width: 991px) and (min-width: 768px) {
+  .empty {
+    display: none;
+  }
+}*/
+
 .person{
-  margin-top: 100px;
+  margin-top: 50px;
   float: left;
   text-align: center;
+  width: 100%;
   /*background-color: black;*/
-  margin-left: 80px;
+  /*margin-left: 80px;*/
 /*margin-right: 70px;*/
 height: 230px;
 width: 200px;
@@ -2055,8 +2083,10 @@ width: 200px;
     /*float:right;*/
   text-align: center;
   /*background-color: black;*/
-  margin-left: 450px;
-  width: 220px;
+  /*margin-left: 450px;*/
+  width: 230px;
+  margin: 0 auto;
+  width: 100%;
 
 /*margin-right: 70px;*/
 
