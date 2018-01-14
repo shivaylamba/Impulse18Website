@@ -37,8 +37,8 @@
     height: 100%;
 }
 
-canvas{
-    background: url(https://jackrugile.com/lab/fireworks-v2/images/bg.jpg);
+.canvas-container canvas{
+    background: url("../images/canvas_bg.jpg");
     z-index: -11;
     position: absolute;
     top: 0;
