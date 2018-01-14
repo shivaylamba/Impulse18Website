@@ -1,32 +1,7 @@
-$(document).on('ready', function() { 
-
-// 	initParallax();
-// 	initEvents();
-// 	initCollapseMenu();
-
-// 	initSliders();
-// 	/* You can disable srollanimation by removing next function */
-// 	initScrollAnimation();
-
-	
-// 	/* All items in row match one height */
-// 	$(function() { $('.matchHeight').matchHeight(); });	
-
-// 	/* Lightbox plugin */
-// 	$('.swipebox').swipebox({autoplayVideos: true});
-
-// 	$('#navbar').on('click', 'a', function (event) {
-
-//         event.preventDefault();
-//         var href = $.attr(this, 'href').split('#');
-
-//         $('html, body').animate({
-//             scrollTop: $( '#' + href[1] ).offset().top - 80
-//         }, 500);
-
-// 		return false;
-// 	});	
-// });
+$(document).on('ready', function() {
+ 
+ 	initSliders();
+});
 
 // $('#submit').on('click',function(){
 // 	alert("thank you for your response");
@@ -87,34 +62,27 @@ $(document).on('ready', function() {
 //     });	
 // }
 
-
 /* Swiper slider */
 function initSliders() {
 
-    var gallerySwiper = new Swiper('#gallery-slider', {
+    var gallerySwiper = new Swiper('.swiper-container', {
 		direction   : 'horizontal',
 
-        slidesPerView: 4,
-        slidesPerColumn: 2,
-
-		speed		: 1000,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+		speed		: 800,
 		nextButton	: '.arrow-right',
 		prevButton	: '.arrow-left',
-	
-		autoplay    : 7000,
-		autoplayDisableOnInteraction	: false,
+		keyboardControl: true,
+		grabCursor: true,
+		effect: 'coverflow',
+		autoplay    : 6000,
+		autoplayDisableOnInteraction: false,
+		
+   
     });
-
-	$(window).on('resize', function(){
-
-		var ww = $(window).width()
-		if (ww > 1000) { gallerySwiper.params.slidesPerView = 4; }
-		if (ww > 768 && ww <= 1000) { gallerySwiper.params.slidesPerView = 3; }
-		if (ww > 480 && ww <= 767) { gallerySwiper.params.slidesPerView = 2; }
-		if (ww <= 479) { gallerySwiper.params.slidesPerView = 1; }
-
-		gallerySwiper.update();
-	}).resize();
 
 }
 
@@ -485,7 +453,215 @@ $('#team_name').css("visibility","hidden");
 }
 });
 
+/* Google maps init */
 
+function initMap() {
+    var uluru = {lat: 28.719614, lng: 77.066186};
+    var map = new google.maps.Map(document.getElementById('myMap'), {
+      zoom: 13,
+      center: uluru,
+      styles: [
+	  {
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#212121"
+	      }
+	    ]
+	  },
+	  {
+	    "elementType": "labels.icon",
+	    "stylers": [
+	      {
+	        "visibility": "on"
+	      }
+	    ]
+	  },
+	  {
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#757575"
+	      }
+	    ]
+	  },
+	  {
+	    "elementType": "labels.text.stroke",
+	    "stylers": [
+	      {
+	        "color": "#212121"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "administrative",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#757575"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "administrative.country",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#9e9e9e"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "administrative.land_parcel",
+	    "stylers": [
+	      {
+	        "visibility": "off"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "administrative.locality",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#bdbdbd"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "poi",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#757575"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "poi.park",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#181818"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "poi.park",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#616161"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "poi.park",
+	    "elementType": "labels.text.stroke",
+	    "stylers": [
+	      {
+	        "color": "#1b1b1b"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road",
+	    "elementType": "geometry.fill",
+	    "stylers": [
+	      {
+	        "color": "#2c2c2c"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#8a8a8a"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road.arterial",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#510b31"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road.highway",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#3c3c3c"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road.highway.controlled_access",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#4e4e4e"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "road.local",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#616161"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "transit",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#757575"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "water",
+	    "elementType": "geometry",
+	    "stylers": [
+	      {
+	        "color": "#000000"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "water",
+	    "elementType": "geometry.fill",
+	    "stylers": [
+	      {
+	        "color": "#0c98e7"
+	      }
+	    ]
+	  },
+	  {
+	    "featureType": "water",
+	    "elementType": "labels.text.fill",
+	    "stylers": [
+	      {
+	        "color": "#3d3d3d"
+	      }
+	    ]
+	  }
+	]
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+    
+}
 
 // // $('#submit').on('click',function(){
 // // 	alert("thank you for your response");

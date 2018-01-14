@@ -1406,6 +1406,11 @@ transform: scaleX(-1)*/;
 #gallery {
   padding: 90px 0;
 }
+#gallery .container h3 {
+  font-family: "Josefin sans", sans-serif;
+  text-transform: uppercase;
+}
+/*
 #gallery .row {
   margin: 0 -7px;
 }
@@ -1432,8 +1437,22 @@ transform: scaleX(-1)*/;
 #gallery a.swiper-slide img:hover {
   border: 4px solid #AC3A6D;
 }
+*/
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+  height: 375px; 
+  margin-bottom: 20px;
+}
+.swiper-container {
+      width: 100%;
+      height: 100%;
+}
+
 #gallery .arrows {
   text-align: center;
+  margin:0 auto;
 }
 #gallery .arrow-left,
 #gallery .arrow-right {
@@ -1450,6 +1469,7 @@ transform: scaleX(-1)*/;
   color: #AC3A6D;
   border: 1px solid #AC3A6D;
 }
+/*
 @media (max-width: 768px) {
   #gallery {
     padding: 40px 0;
@@ -1457,7 +1477,7 @@ transform: scaleX(-1)*/;
   #gallery h3 {
     margin-bottom: 20px;
   }
-}
+}*/
 /*
 	12. Join form
 */
@@ -1489,11 +1509,13 @@ transform: scaleX(-1)*/;
 /*
 	13. Full-width google map
 */
-#map {
+#myMap {
   height: 450px;
-  margin-top: -145px;
-  /* Vertical margin for form */
-  z-index: -1;
+  width: 100%;
+  /*margin-top: 55px;*/
+   /*Vertical margin for form */
+   
+  z-index: 1;
 }
 /*
 	14. Contacts block
