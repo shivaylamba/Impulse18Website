@@ -3,65 +3,6 @@ $(document).on('ready', function() {
  	initSliders();
 });
 
-// $('#submit').on('click',function(){
-// 	alert("thank you for your response");
-// });
-
-// $(window).on('scroll', function (event) {
-
-// 	checkNavbar();
-// 	checkCountUp();
-// }).scroll();
-
-// /* Parallax fix on window resize */ 
-// $(window).on('resize', function(){
-
-//  	initParallax();
-// });
-
-
-/* Collapse menu events */
-// function initCollapseMenu() {
-
-// 	var navbar = $('#navbar'),
-// 		navbar_toggle = $('.navbar-toggle'),
-// 		navbar_wrapper = $("#nav-wrapper");
-
-//     navbar.on('click', 'a', function (e) {
-
-//         navbar_toggle.toggleClass('collapsed');
-//         navbar.toggleClass('collapse');
-//     });
-
-//     navbar_wrapper.on('click', '.navbar-toggle', function (e) {
-
-//         navbar_toggle.toggleClass('collapsed');
-//         navbar.toggleClass('collapse');
-//     });
-
-//     navbar_wrapper.on('click', '.hasSub > a', function() {
-
-//     	var el = $(this);
-
-//     	el.next().toggleClass('show');
-//     	el.parent().toggleClass('show');
-//     	return false;
-//     });
-
-//     var lastWidth;
-//     $(window).on("resize", function () {
-
-//     	var winWidth = $(window).width();
-
-//         if (winWidth > 992 && navbar_toggle.is(':hidden')) {
-//             navbar.addClass('collapse');
-//             navbar_toggle.addClass('collapsed');
-//         }
-
-//        	lastWidth = winWidth;
-//     });	
-// }
-
 /* Swiper slider */
 function initSliders() {
 
@@ -77,7 +18,7 @@ function initSliders() {
 		prevButton	: '.arrow-left',
 		keyboardControl: true,
 		grabCursor: true,
-		effect: 'coverflow',
+		effect: 'slide',
 		autoplay    : 6000,
 		autoplayDisableOnInteraction: false,
 		
@@ -85,6 +26,42 @@ function initSliders() {
     });
 
 }
+
+if(window.innerWidth <=767)
+	{
+		var content2 = document.querySelector('.row2 > .content2');
+    var content = document.querySelector('.row2 > .content');
+		var row2 = document.querySelector('.row2');
+		
+		//var temp = content2.cloneNode(true);
+		row2.removeChild(row2.firstChild);
+		row2.appendChild(content2);
+	}
+
+
+
+window.addEventListener('resize',function(){
+	if(window.innerWidth <=767)
+	{
+		var content2 = document.querySelector('.row2 > .content2');
+    var content = document.querySelector('.row2 > .content');
+		var row2 = document.querySelector('.row2');
+		
+		//var temp = content2.cloneNode(true);
+		row2.removeChild(row2.firstChild);
+		row2.appendChild(content2);
+	}
+
+	else{
+		var content2 = document.querySelector('.row2 > .content2');
+    var content = document.querySelector('.row2 > .content');
+		var row2 = document.querySelector('.row2');
+		
+		// var temp = content.cloneNode(true);
+		row2.removeChild(row2.firstChild);
+		row2.insertBefore(content2,row2.firstChild);
+	}
+})
 
 
 /* All keyboard and mouse events */
@@ -438,27 +415,27 @@ function initSliders() {
 // });
 
 // //new code
-$('#event_chosen').change(function(){
-var id = $(this).val();
+// $('#event_chosen').change(function(){
+// var id = $(this).val();
 
-if(id === "Mait Hacks"){
-	$('#team_name').css("visibility","visible");
-	$('#team_name').prop('disabled',false);
-	// alert("blah");
-}
-// else $('#team_name').prop('disabled',true);
-else {
-	// alert("hidden");
-$('#team_name').css("visibility","hidden");
-}
-});
+// if(id === "Mait Hacks"){
+// 	$('#team_name').css("visibility","visible");
+// 	$('#team_name').prop('disabled',false);
+// 	// alert("blah");
+// }
+// // else $('#team_name').prop('disabled',true);
+// else {
+// 	// alert("hidden");
+// $('#team_name').css("visibility","hidden");
+// }
+// });
 
 /* Google maps init */
 
 function initMap() {
     var uluru = {lat: 28.719614, lng: 77.066186};
     var map = new google.maps.Map(document.getElementById('myMap'), {
-      zoom: 13,
+      zoom: 16,
       center: uluru,
       styles: [
 	  {

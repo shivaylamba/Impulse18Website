@@ -548,14 +548,14 @@ table {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 24px;
-}
+} 
 @media (max-width: 768px) {
-  body,
+   body,
   div,
   table {
     font-size: 16px;
     line-height: 26px;
-  }
+  } 
 }
 a {
   color: #171C62;
@@ -1349,8 +1349,6 @@ margin-top: 0px;
 #events{
 
    background: #ffffff;
-
-   background-image: url("../images/form-bg.png");
    /* Old browsers */
    /*background: -moz-linear-gradient(left, #1b1f83 0%, #972461 100%);*/
    /* FF3.6-15 */
@@ -1367,9 +1365,9 @@ margin-top: 0px;
 
  
 }
-#events .container{
+/* #events .container{
   float: left;
-}
+} */
 #event_title{
   font-size: 60px;
   margin-top: 30px;
