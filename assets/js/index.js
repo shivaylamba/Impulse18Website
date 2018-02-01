@@ -228,3 +228,38 @@ function animate()
 // init();
 
 animate();
+
+
+// Forms --
+
+var speed = 500;
+$(document).ready(function(){
+
+    $(".form1_trigger").on('click', function(){
+        $('div.forms:not(div.form1)').slideUp(speed);
+        $('div.form1').slideToggle(speed);
+        
+    });
+     $(".form2_trigger").on('click', function(){
+        $('div.forms:not(div.form2)').slideUp(speed);
+        $('div.form2').slideToggle(speed);
+        
+
+    });
+      $(".form3_trigger").on('click', function(){
+        $('div.forms:not(div.form3)').slideUp(speed);
+        $('div.form3').slideToggle(speed);
+        
+
+    });
+       $(".form4_trigger").on('click', function(){
+        $('div.forms:not(div.form4)').slideUp(speed);
+        $('div.form4').slideToggle(speed);
+        
+
+    });
+
+});
+
+
+// 
