@@ -28,9 +28,11 @@
 	 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,700" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
 
-	 <script src="assets/js/jquery.min.js"></script>
+	  <script src="assets/js/jquery.min.js"></script>
 	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+	 
 
  </head>
  <body data-spy="scroll" data-offset="120" data-target="#navbar">
@@ -236,43 +238,230 @@
 			</div>
 <!-- <div class="container"> -->
 <div class="row event-row">
-		<div class="col-md-6  content">
+		<div class="col-md-6  content event1">
 				<span class ="event_header">MaitHacks</span>
 				<p class = "event_subheader">48 Hour Hackathon</p>
 				<p class="event_content">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
-				<a href="#" class="event-link">REGISTER</a>	
+				<span class="event-link form2_trigger" style="cursor: pointer;">REGISTER</span>	
 		</div>
-		<div class="col-md-6  content content2">
+
+
+		<div class="col-md-6  content content2 event2">
 				<span class ="event_header2">CodeBonanza</span>
 				<p class = "event_subheader2">Online Competitive Coding</p>
 				<p class="event_content2">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
-				<a href="#" class="event-link2">REGISTER</a>	
+				<span class="event-link2 form1_trigger" style="cursor: pointer;">REGISTER</span>	
 		</div>
 		<!-- <div class="col-md-6  poster">
 			<img src="assets/images/poster.jpg" alt="poster">
 		</div> -->
 </div>
-<div class="row event-row row2">
+
+
+<div class="form2 hide forms">
+	<div class="container">
+		<br>
+		<h3 style="color: #000;">Register for MaitHacks</h3>
+
+		<form>
+
+			<div class="md-form">
+				<i class="fa fa-users prefix grey-text"></i>
+				<input type="text" class="form-control" id="team-name">
+				<label for="team-name">Team Name</label>
+			</div>
+
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" class="form-control" id="name">
+				<label for="name">Your Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" class="form-control" id="email">
+				<label for="email">Your Email</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" class="form-control" id="college-name">
+				<label for="college-name">College Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" class="form-control" id="mobile">
+				<label for="mobile">Contact Number</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-github prefix grey-text"></i>
+				<input type="text" class="form-control" id="github">
+				<label for="github">Github Link</label>
+			</div>
+			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+		</form>
+		<p></p><br>
+	</div>
+</div>
+
+<div class="row event-row eventsm2">
+	<div class="col-md-6  content content2">
+				<span class ="event_header2">CodeBonanza</span>
+				<p class = "event_subheader2">Online Competitive Coding</p>
+				<p class="event_content2">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
+				<span class="event-link2 form1_trigger" style="cursor: pointer;">REGISTER</span>	
+		</div>
+</div>
+
+<div class="form1 hide forms">
+	<div class="container">
+		<br>
+		<h3 style="color: #fff;">Register for CodeBonanza</h3>
+
+		<form>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" class="form-control" id="name">
+				<label for="name">Your Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" class="form-control" id="email">
+				<label for="email">Your Email</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" class="form-control" id="college-name">
+				<label for="college-name">College Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" class="form-control" id="mobile">
+				<label for="mobile">Contact Number</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-github prefix grey-text"></i>
+				<input type="text" class="form-control" id="github">
+				<label for="github">Github Link</label>
+			</div>
+			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+		</form>
+		<p></p><br>
+	</div>
+</div>
+
+
+<div class="row event-row row2" >
 	    <!-- <div class="col-md-6  poster">
 				<img src="assets/images/poster.jpg" alt="poster">
 			</div> -->
-			<div class="col-md-6  content content2">
+			<div class="col-md-6  content content2 event3">
 					<span class ="event_header2">CodeBonanza</span>
 					<p class = "event_subheader2">Online Competitive Coding</p>
 					<p class="event_content2">
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
-			<a href="#" class="event-link2">REGISTER</a>	
+					<span class="event-link2 form3_trigger" style="cursor: pointer;">REGISTER</span>	
 			</div>	 
-			<div class="col-md-6  content">
+			<div class="col-md-6  content event4">
 					<span class ="event_header">MaitHacks</span>
 					<p class = "event_subheader">48 Hour Hackathon</p>
 					<p class="event_content">
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
-					<a href="#" class="event-link">REGISTER</a>	
+					<span class="event-link form4_trigger" style="cursor: pointer;">REGISTER</span>
+
+			</div>
+</div>
+<div class="form3 hide forms">
+	<div class="container">
+		<br>
+		<h3 style="color: #fff;">Register for CodeBonanza</h3>
+
+		<form>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" class="form-control" id="name">
+				<label for="name">Your Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" class="form-control" id="email">
+				<label for="email">Your Email</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" class="form-control" id="college-name">
+				<label for="college-name">College Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" class="form-control" id="mobile">
+				<label for="mobile">Contact Number</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-github prefix grey-text"></i>
+				<input type="text" class="form-control" id="github">
+				<label for="github">Github Link</label>
+			</div>
+			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+		</form>
+		<p></p><br>
+	</div>
+</div>
+
+<div class="row event-row row2">
+	<div class="col-md-6  content eventsm4">
+					<span class ="event_header">MaitHacks</span>
+					<p class = "event_subheader">48 Hour Hackathon</p>
+					<p class="event_content">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
+					<span class="event-link form4_trigger" style="cursor: pointer;">REGISTER</span>
+
+			</div>
+</div>
+
+<div class="form4 hide forms">
+	<div class="container">
+		<br>
+		<h3 style="color: #000;">Register for MaitHacks</h3>
+
+		<form>
+
+			<div class="md-form">
+				<i class="fa fa-users prefix grey-text"></i>
+				<input type="text" class="form-control" id="team-name">
+				<label for="team-name">Team Name</label>
 			</div>
 
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" class="form-control" id="name">
+				<label for="name">Your Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" class="form-control" id="email">
+				<label for="email">Your Email</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" class="form-control" id="college-name">
+				<label for="college-name">College Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" class="form-control" id="mobile">
+				<label for="mobile">Contact Number</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-github prefix grey-text"></i>
+				<input type="text" class="form-control" id="github">
+				<label for="github">Github Link</label>
+			</div>
+			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+		</form>
+		<p></p><br>
+	</div>
 </div>
 <!-- </div> -->
 <!--
@@ -342,6 +531,8 @@ Create great experiences , win prizes and get recognised.Be here! After all,its 
 
 </div> -->
 </section>
+<!-- Registration forms -->
+
 
 
 
@@ -694,7 +885,8 @@ var marker = new google.maps.Marker({position: new google.maps.LatLng(28.719614,
 
 	 <!-- <script type="text/javascript" src="assets/js/modernizr-2.6.2.min.js"></script> -->
 	 <script type="text/javascript" src="assets/js/plugins.min.js"></script>
-
+	
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
 
 	 <script src="assets/js/vertical-timeline.min.js"></script>
 	 <script>
