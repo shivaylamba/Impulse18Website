@@ -29,6 +29,14 @@ var UserSchema = new mongoose.Schema({
   github:{
       type:String,
       required:true
+  },
+  teamname:{
+    type:String,
+    required: false
+  },
+  event: {
+    type: String,
+    required: true
   }
 
 });

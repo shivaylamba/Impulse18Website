@@ -91,7 +91,9 @@ var User = require('./models/user');
       req.body.password &&
       req.body.github &&
       req.body.mobile &&
-      req.body.college ) {
+      req.body.college &&
+      req.body.teamname &&
+      req.body.event  ) {
   
       var userData = {
         email: req.body.email,
@@ -99,7 +101,9 @@ var User = require('./models/user');
         password: req.body.password,
         college:  req.body.college,
         github:   req.body.github,
-        mobile:   req.body.mobile
+        mobile:   req.body.mobile,
+        teamname: req.body.teamname,
+        event:    req.body.event
 
       }
   
@@ -126,7 +130,7 @@ var User = require('./models/user');
       });
     } else {
       var err = new Error('All fields required.');
-      err.status = 400;s
+      err.status = 400;
       return next(err);
     }
   })
@@ -146,7 +150,10 @@ var User = require('./models/user');
             return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + 
             + '<h2>github: </h2>' + user.github 
             + '<h2>college: </h2>' + user.college 
-            + '<h2>mobile: </h2>' + user.mobile +
+            + '<h2>mobile: </h2>' + user.mobile 
+            + '<h2>team name: </h2>' + user.teamname +
+            + '<h2>event: </h2>' + user.event +
+
             '<br><a type="button" href="/logout">Logout</a>')
           }
         }
