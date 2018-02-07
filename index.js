@@ -91,9 +91,9 @@ var User = require('./models/user');
       req.body.password &&
       req.body.github &&
       req.body.mobile &&
-      req.body.college &&
-      req.body.teamname &&
-      req.body.event  ) {
+      req.body.college 
+      && req.body.teamname  
+    ) {
   
       var userData = {
         email: req.body.email,
@@ -101,11 +101,10 @@ var User = require('./models/user');
         password: req.body.password,
         college:  req.body.college,
         github:   req.body.github,
-        mobile:   req.body.mobile,
-        teamname: req.body.teamname,
-        event:    req.body.event
-
-      }
+        mobile:   req.body.mobile
+        ,
+        teamname: req.body.teamname
+         }
   
       User.create(userData, function (error, user) {
         if (error) {
@@ -152,7 +151,6 @@ var User = require('./models/user');
             + '<h2>college: </h2>' + user.college 
             + '<h2>mobile: </h2>' + user.mobile 
             + '<h2>team name: </h2>' + user.teamname +
-            + '<h2>event: </h2>' + user.event +
 
             '<br><a type="button" href="/logout">Logout</a>')
           }
