@@ -203,7 +203,7 @@
 	</di v> -->
 <div class="parallax-container">
 
-	 <h2 class="teaser">Teaser</h2>
+	 <h2 class="teaser"></h2>
 	 <video  controls>
 			<source src="videos/Final.ogv" type="video/ogv">
 			<source src="videos/Final.webm" type="video/webm">
@@ -304,7 +304,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 	</div>
 </div>
 
-<div class="row event-row eventsm2">
+<div class="row event-row event_hide">
 	<div class="col-md-6  content content2">
 				<span class ="event_header2">CodeBonanza</span>
 				<p class = "event_subheader2">Online Competitive Coding</p>
@@ -372,53 +372,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 
 			</div>
 </div>
-<div class="form3 hide forms">
-	<div class="container">
-		<br>
-		<h3 style="color: #fff;">Register for CodeBonanza</h3>
-
-		<form>
-			<div class="md-form">
-				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" class="form-control" id="name">
-				<label for="name">Your Name</label>
-			</div>
-			<div class="md-form">
-				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" class="form-control" id="email">
-				<label for="email">Your Email</label>
-			</div>
-			<div class="md-form">
-				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" class="form-control" id="college-name">
-				<label for="college-name">College Name</label>
-			</div>
-			<div class="md-form">
-				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" class="form-control" id="mobile">
-				<label for="mobile">Contact Number</label>
-			</div>
-			<div class="md-form">
-				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" class="form-control" id="github">
-				<label for="github">Github Link</label>
-			</div>
-			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
-		</form>
-		<p></p><br>
-	</div>
-</div>
-
-<div class="row event-row row2">
-	<div class="col-md-6  content eventsm4">
-					<span class ="event_header">MaitHacks</span>
-					<p class = "event_subheader">48 Hour Hackathon</p>
-					<p class="event_content">
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
-					<span class="event-link form4_trigger" style="cursor: pointer;">REGISTER</span>
-
-			</div>
-</div>
 
 <div class="form4 hide forms">
 	<div class="container">
@@ -463,6 +416,52 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 		<p></p><br>
 	</div>
 </div>
+<div class="row event-row row2">
+	<div class="col-md-6  content content2 event_hide">
+					<span class ="event_header2">CodeBonanza</span>
+					<p class = "event_subheader2">Online Competitive Coding</p>
+					<p class="event_content2">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, quis laudantium ab illo, quaerat aperiam repellat, nostrum hic aliquid quasi et corrupti. Doloremque ut facilis impedit voluptates vero et unde, dolorem asperiores id neque. Eius velit recusandae enim molestias, animi officiis nostrum consequatur!</p>
+					<span class="event-link2 form3_trigger" style="cursor: pointer;">REGISTER</span>	
+			</div>	
+</div>
+<div class="form3 hide forms">
+	<div class="container">
+		<br>
+		<h3 style="color: #fff;">Register for CodeBonanza</h3>
+
+		<form>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" class="form-control" id="name">
+				<label for="name">Your Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" class="form-control" id="email">
+				<label for="email">Your Email</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" class="form-control" id="college-name">
+				<label for="college-name">College Name</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" class="form-control" id="mobile">
+				<label for="mobile">Contact Number</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-github prefix grey-text"></i>
+				<input type="text" class="form-control" id="github">
+				<label for="github">Github Link</label>
+			</div>
+			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+		</form>
+		<p></p><br>
+	</div>
+</div>
+
 <!-- </div> -->
 <!--
 		<span id = "event_header">CodeBonaza</span>
@@ -559,9 +558,9 @@ Create great experiences , win prizes and get recognised.Be here! After all,its 
 
 	 <section id="sponsors">
 		 <div class="container">
-			 <h3> Sponsors </h3>
+			 <h3 id = "event_title" style="color:black;">SPONSORS </h3>
 			 <div class="row">
-				 <div class="col-md-1 hidden-sm hidden-ms hidden-xs matchHeight"></div>
+				 <!-- <div class="col-md-1 hidden-sm hidden-ms hidden-xs matchHeight"></div>
 				 <div class="col-md-2 col-sm-3 col-ms-4 col-xs-6 matchHeight">
 					 <img src="/images/_company-1.png" class="full-width" alt="Sponsor" />
 				 </div>
@@ -595,7 +594,17 @@ Create great experiences , win prizes and get recognised.Be here! After all,its 
 				 <div class="col-md-2 col-sm-3 col-ms-4  col-xs-6 matchHeight">
 					 <img src="/images/_company-10.png" class="full-width" alt="Sponsor" />
 				 </div>
-				 <div class="col-md-1 hidden-sm hidden-ms hidden-xs matchHeight"></div>
+				 <div class="col-md-1 hidden-sm hidden-ms hidden-xs matchHeight"></div> -->
+				 <div class="col-md-4 col-sm-4 col-xs-12 matchHeight">
+					 <img src="/images/red.png" class="full-width" alt="Sponsor" />
+				 </div>
+				 <div class="col-md-4 col-sm-4 col-xs-12 matchHeight with_name">
+					 <img src="/images/pixectra_new.png" class="full-width" alt="Sponsor" />
+				 </div>
+				 <div class="col-md-4 col-sm-4 col-xs-12 matchHeight">
+					 <img src="/images/logo_agro.png" class="full-width" alt="Sponsor" />
+				 </div>
+
 			 </div>
 		 </div>
 	 </section>
@@ -604,7 +613,7 @@ Create great experiences , win prizes and get recognised.Be here! After all,its 
 
 		 <div class="container">
 
-			 <h3 id = "meetteam">Meet Impulse'18 Team! </h3>
+			 <h3 id = "event_title">Meet Impulse'18 Team </h3>
 			 <div class = "photorow">
 
 			<div class = "person_vinay">
@@ -615,65 +624,66 @@ Create great experiences , win prizes and get recognised.Be here! After all,its 
 				<!-- <label>Vinay Sir</label> -->
 			</div>
 		</div>
+		<br>
 		<div class = "photorow row">
-	        <div class = "person col col-lg-3">
-				<img id = "photo" src="/images/deepali.jpg"  alt = "Deepali" ><p></p>
+	        <div class = "person col col-lg-4">
+				<img id = "photo" src="/images/deepali.jpeg"  alt = "Deepali" ><p></p>
 				<span id = "personname">Deepali Singh</span>
 			</div>
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/deepanshi.jpg"  alt = "Deepanshi" ><p></p>
 				<span id = "personname">Deepanshi Bansal</span>
 			</div>
-				<div class = "person col col-lg-3">
+				<!-- <div class = "person col col-lg-3">
 				<img id = "photo" src="/images/krishna.jpg"  alt = "Krishna" ><p></p>
 				<span id = "personname">Krishna</span>
 			</div>
 			<div class = "person col col-lg-3">
 				<img id = "photo" src="/images/saksham.jpg"  alt = "Saksham" ><p></p>
 				<span id = "personname">Saksham</span>
-			</div>
+			</div> -->
 
 
 		<!-- </div> -->
 
 			<!-- <div class = "photorow row"> -->
 
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/sparsh.jpg"  alt = "Deepali" ><p></p>
 				<span id = "personname">Sparsh Wadhwa</span>
 			</div>
 
-         	<div class = "person col col-lg-3">
+         	<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/rajat.jpg"  alt = "Rajat" >
 				<p></p><span id = "personname">Rajat Gupta</span>
 			</div>
-            <div class = "person col col-lg-3">
+            <div class = "person col col-lg-4">
 				<img id = "photo" src="/images/saurabh.jpg"  alt = "Saurabh" ><p></p>
 				<span id = "personname">Saurabh Aggarwal</span>
 			</div>
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/rishabh.jpg"  alt = "Rishabh" ><p></p>
 				<span id = "personname">Rishabh Singh</span>
 			</div>
 <!-- </div> -->
 			 <!-- <div class = "photorow row"> -->
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/heena2.jpeg"  alt = "Heena" ><p></p>
 				<span id = "personname">Heena Garg</span>
 			</div>
 
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 			<img id = "photo" src="/images/rawat.jpeg"  alt = "Bhavya Rawat" ><p></p>
 				<span id = "personname">Bhavya Rawat</span>
 			</div>
-			<div class = "person col col-lg-3">
+			<div class = "person col col-lg-4">
 				<img id = "photo" src="/images/vivek.jpg"  alt = "Vivek" >
 				<p></p><span id = "personname">Vivek Aggarwal</span>
 			</div>
-			<div class="col person empty col-lg-3">
+			<!-- <div class="col person empty col-lg-3">
 				<img id="photo">
 				<span id="personname"></span>
-			</div>
+			</div> -->
 	</div>
 
 			 </div>
