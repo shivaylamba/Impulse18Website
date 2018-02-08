@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------
+------------------------------------------------------------------
 [Table of contents]
 
 1. CSS Reset
@@ -1316,19 +1316,61 @@ margin-top: 0px;
 	9. Sponsors logos
 */
 #sponsors {
-  padding: 85px 0 85px;
+  /*padding: 0 85px;*/
+  padding-bottom: 80px;
+}
+#sponsors #event_title {
+  font-size:60px;
 }
 #sponsors div {
   text-align: center;
+}
+#sponsors div img {
+  margin: 0 auto;
+  width: 50%;
+  /*height: 50%;*/
+}
+#sponsors .with_name img {
+  margin:0 auto;
+  width: 100%;
 }
 #sponsors .row > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 575px) {
+  #sponsors #event_title {
+    /*padding: 40px 0;*/
+    /*margin-bottom:px;*/
+    margin-bottom: 20px;
+    margin-top: -40px;
+  }
   #sponsors {
-    padding: 40px 0;
+    margin-bottom: -40px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  #sponsors #event_title {
+    /*padding: 40px 0;*/
+    /*margin-bottom:px;*/
+    margin-bottom: 20px;
+    margin-top: -40px;
+  }
+  #sponsors {
+    margin-bottom: -40px;
+  }
+  #sponsors div img {
+    width: 30%;
+  }
+  #sponsors .with_name img {
+  /*margin:0 auto;*/
+  width: 80%;
+  }
+  #sponsors #event_title {
+    font-size:45px;
   }
 }
 /*
@@ -1403,7 +1445,8 @@ transform: scaleX(-1)*/;
   color: #ffffff;
 }
 #gallery {
-  padding: 90px 0;
+  /*padding: 90px 0;*/
+  padding-bottom: 90px;
 }
 #gallery .container h3 {
   font-family: "Josefin sans", sans-serif;
@@ -1985,18 +2028,23 @@ img.rounded {
   top: 20px;
 }
 
-
+/*-----TEAM------*/
+/*
 #meetteam{
   color: white;
   margin-top: -10px;
   font-size: 55px;
   font-weight: 600px;
+}*/
+#team #event_title {
+  font-size: 60px;
+  margin-top: -20px;
 }
 #photo{
 
-  border-radius: 100px;
-  height: 200px;
-  width: 200px;
+  border-radius: 120px;
+  height: 250px;
+  width: 250px;
   /*border-style: solid;*/
   /*border-width: 8px;*/
   transition: .25s ease;
@@ -2007,15 +2055,15 @@ img.rounded {
 border-width: 3px;
  border-color: #AC3A6D;
  /*border-style: solid;*/
- border-radius: 30px;
+ border-radius: 20px;
 
  padding: 8px;
 }
 #photo_vinay{
 /*margin-top: 10px;*/
-  border-radius: 100px;
-  height: 200px;
-  width: 200px;
+  border-radius: 120px;
+  height: 250px;
+  width: 250px;
   margin-left: 5px;
   /*border-style: solid;*/
   /*border-width: 8px;*/
@@ -2026,19 +2074,20 @@ border-width: 3px;
 /*border-width: 3px;
  border-color: #AC3A6D;*/
  /*border-style: solid;*/
-border-radius: 30px;
+border-radius: 20px;
 border-width: 3px;
  border-color: #AC3A6D;
  padding: 8px;
 }
 
 
-.photorow{
+/*.photorow{
  float: left;
   margin-top: 0px;
   width: 100%;
   margin: 0 auto;
-}
+}*/
+
 #personname{
   color: white;
   font-size: 20px;
@@ -2090,15 +2139,16 @@ cursor: auto;
 }*/
 
 .person{
-  margin-top: 50px;
-  float: left;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  /*float: left;*/
   text-align: center;
   width: 100%;
   /*background-color: black;*/
   /*margin-left: 80px;*/
 /*margin-right: 70px;*/
-height: 230px;
-width: 200px;
+/*height: 230px;*/
+/*width: 200px;*/
 }
 .person_vinay{
     /*float:right;*/
@@ -2108,12 +2158,23 @@ width: 200px;
   width: 230px;
   margin: 0 auto;
   width: 100%;
-
+  margin-bottom: 10px;
 /*margin-right: 70px;*/
 
 height: 290px;
 }
 
+@media (max-width: 768px) {
+  #team #event_title {
+    font-size: 45px;
+  }
+  #team div img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/*-------------------*/
 #stat {
   margin: -80px 0 94px 0;
   position: relative;
@@ -2931,28 +2992,31 @@ border: none;
 
 .form2, .form4 {
   background-color: white;
-  border-bottom: 1px solid black;
 }
-
-.form1, .form3 {
+.form2 {
+    border-bottom: 1px solid black;
+}
+.form1 {
   border-bottom: 1px solid white;
 }
+
+
 
 .hide {
   display: none;
 }
 
-.eventsm2 , .eventsm4 {
+.event_hide {
   display: none;
 }
 
 @media screen and (max-width: 768px){
-  .event2, .event4 {
+  .event2, .event3 {
     display: none;
   }
-  .eventsm2, .eventsm4 {
+  .event_hide {
     display: block;
   }
 }
 
-/*---------------*/
+/*---------------
