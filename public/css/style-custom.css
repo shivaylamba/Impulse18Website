@@ -107,7 +107,7 @@
 
 /* TIMER SECTION */
 
-.timer{
+/* .timer{
     width: 80%;
     background-color: #BB5758;
     border-radius: 10px;
@@ -160,6 +160,46 @@
     margin: auto;
 }
 
+ */
+
+.timer{
+    position: absolute;
+    /* bottom: -30%; */
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 55%;
+    left: 22%;
+    padding: 40px 0px 0px 0px;
+    border: 2px rgb(104, 104, 104) solid;
+    
+}
+.timer-day,.timer-hour,.timer-minute,.timer-second{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+}
+.timer-row{
+    text-align: center;
+}
+
+.day,.hour,.minute,.second{
+    color: rgb(129, 127, 127);
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    left: 0%;
+    top:5%;
+    
+}
+
+
+
+.days,.hours,.minutes,.seconds{
+    margin-right:20px;
+}
 
 
 /* //TIMER SECTION */
@@ -179,7 +219,7 @@
     display: block;
     margin-left: 0px;
     font-size: 13vmin;
-    padding-top: 150px;
+    padding-top: 200px;
 }
 
 .march-9,.march-10{
@@ -285,6 +325,7 @@ video{
 
 .event-link{
     color: black;
+    background-color: white;
     text-decoration: none;
     border: 2px black solid;
     padding: 5px 20px;
@@ -298,6 +339,7 @@ video{
 
 .event-link2{
     color: white;
+    background-color: black;
     text-decoration: none;
     border: 2px white solid;
     padding: 5px 20px;
@@ -356,16 +398,16 @@ video{
 /* MEDIA QUERIES */
 
 @media screen and (min-width:1140px) and (max-width: 1219px) {
-    .timer-row{
+    /* .timer-row{
         width: 75%;
-    }
+    } */
     .event_content,.event_content2{
         line-height: 30px;
     }
 }
 
 @media screen  and (min-width:990px) and (max-width: 1139px) {
-    .timer-row{
+    /* .timer-row{
         width: 75%;
     }
     .day,.hour,.minute,.second{
@@ -376,6 +418,10 @@ video{
     .day-content,.hour-content,.minute-content,.second-content{
         font-size: 15px;
         
+    } */
+    .timer{
+        width: 65%;
+        left: 17.5%
     }
     .event_content,.event_content2{
         line-height: 30px;
@@ -384,7 +430,7 @@ video{
 }
 
 @media screen  and (min-width:900px) and (max-width: 989px) {
-    .timer-row{
+    /* .timer-row{
         width: 80%;
     }
     .day,.hour,.minute,.second{
@@ -395,6 +441,10 @@ video{
     .day-content,.hour-content,.minute-content,.second-content{
         font-size: 15px;
         
+    } */
+    .timer{
+        width: 65%;
+        left: 17.5%
     }
     .event_content,.event_content2{
         line-height: 30px;
@@ -403,7 +453,7 @@ video{
 }
 
 @media screen  and (min-width:775px) and (max-width: 899px) {
-    .timer{
+    /* .timer{
         width: 85%;
         left: 7.5%;
     }
@@ -418,6 +468,10 @@ video{
     .day-content,.hour-content,.minute-content,.second-content{
         font-size: 13px;
         
+    } */
+    .timer{
+        width: 65%;
+        left: 17.5%;
     }
 
     .event_content,.event_content2{
@@ -427,7 +481,7 @@ video{
 }
 
 @media screen and (min-width:635px)  and (max-width: 774px) {
-    .timer{
+    /* .timer{
         width: 87%;
         left: 6.5%;
     }
@@ -437,115 +491,56 @@ video{
     .day,.hour,.minute,.second{
         font-size: 50px;
         width : 50px;;
-    }
+    } */
 
-    .col{
+    /* .col{
         padding: 0 5px;
-    }
+    } */
     
-    .day-content,.hour-content,.minute-content,.second-content{
+    /* .day-content,.hour-content,.minute-content,.second-content{
         font-size: 13px;
         
-    }
+    } */
     .event_content,.event_content2{
         line-height: 25px;
         font-size: 17px;
     }
+    .timer{
+        width: 80%;
+        left: 10%;
+    }
 }
 
-@media screen and (min-width:520px) and (max-width: 634px) {
+@media screen and (max-width: 634px){
     .timer{
-        width: 90%;
-        left: 5%;
+        width: 85%;
+        left: 7.5%;
     }
-    .timer-row{
-        width: 90%;
+    .timer-day,.timer-hour,.timer-minute,.timer-second{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width: 500px){
+    .timer{
+        width: 95%;
+        left: 2.5%;
+    }
+    .timer-day,.timer-hour,.timer-minute,.timer-second{
+        font-size: 65px;
+    }
+}
+@media screen and (max-width: 420px){
+    .timer{
+        width: 95%;
+        left: 2.5%;
+    }
+    .timer-day,.timer-hour,.timer-minute,.timer-second{
+        font-size: 50px;
     }
     .day,.hour,.minute,.second{
-        font-size: 45px;
-        width : 45px;;
-    }
-
-    .col{
-        padding: 0;
-    }
-    
-    .day-content,.hour-content,.minute-content,.second-content{
         font-size: 13px;
         
     }
 }
-
-@media screen and (min-width:470px) and (max-width: 519px) {
-    .timer{
-        width: 90%;
-        left: 5%;
-    }
-    .timer-row{
-        width: 100%;
-    }
-    .day,.hour,.minute,.second{
-        font-size: 45px;
-        width : 45px;;
-    }
-
-    .col{
-        padding: 0;
-    }
-    
-    .day-content,.hour-content,.minute-content,.second-content{
-        font-size: 13px;
-        
-    }
-}
-
-@media screen  and (max-width: 469px) {
-    .timer{
-        width: 97%;
-        left: 1.5%;
-    }
-    .timer-row{
-        width: 100%;
-    }
-    .day,.hour,.minute,.second{
-        font-size: 45px;
-        width : 45px;
-    }
-
-    .col{
-        padding: 0;
-    }
-    
-    .day-content,.hour-content,.minute-content,.second-content{
-        font-size: 13px;
-        
-    }
-}
-
-@media screen  and (max-width: 411px) {
-    .timer{
-        width: 99%;
-        left: 0.5%;
-    }
-    .timer-row{
-        width: 97%;
-    }
-    .day,.hour,.minute,.second{
-        font-size: 40px;
-        width : 40px;
-    }
-
-    .col{
-        padding: 0;
-    }
-    
-    .day-content,.hour-content,.minute-content,.second-content{
-        font-size: 10px;
-        
-    }
-}
-
-
-
 
 
