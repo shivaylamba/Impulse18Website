@@ -88,7 +88,7 @@
 
 	<div class="timer">
 
-			<h4 class="launch">- Launching In</h4>
+			<!-- <h4 class="launch">- Launching In</h4>
 			<div class="timer-row">
 				<span class="col days">
 
@@ -114,6 +114,42 @@
 						<span class="second-content">Seconds</span>
 
 				</span>
+			</div> -->
+
+			<!-- <span class="days">
+				<span class="timer-day">00</span>
+				<span class="day">Days</span>
+			</span>
+			<span class="hours">
+				<span class="timer-hour">00</span>
+				<span class="hour">Hours</span>
+			</span>
+			<span class="minutes">
+				<span class="timer-minute">00</span>
+				<span class="minute">Minutes</span>
+			</span>
+			<span class="seconds">
+				<span class="timer-second">00</span>
+				<span class="second">Seconds</span>
+			</span> -->
+
+			<div class="row timer-row">
+				<div class="col-md-3 col-sm-3 col-3">
+					<span class="timer-day">00</span>
+				    <p class="day">Days</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-3">
+					<span class="timer-hour">00</span>
+				    <p class="day">Hours</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-3">
+					<span class="timer-minute">00</span>
+				    <p class="day">Minutes</p>
+				</div>
+				<div class="col-md-3 col-sm-3 col-3">
+					<span class="timer-second">00</span>
+				    <p class="day">Seconds</p>
+				</div>
 			</div>
 
 	</div>
@@ -263,42 +299,48 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 <div class="form2 hide forms">
 	<div class="container">
 		<br>
-		<h3 style="color: #000;">Register for MaitHacks</h3>
+		<h3 style="color: #000;">Register for MaitHacks blah</h3>
 
-		<form>
+		<form id = "form1" action = "/" method = "post">
 
-			<div class="md-form">
+			 <div class="md-form">
 				<i class="fa fa-users prefix grey-text"></i>
-				<input type="text" class="form-control" id="team-name">
+				<input type="text" name = "teamname" class="form-control" id="team-name">
 				<label for="team-name">Team Name</label>
-			</div>
+			</div> 
 
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" class="form-control" id="name">
+				<input type="text" name = "name" class="form-control" id="name">
 				<label for="name">Your Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" class="form-control" id="email">
+				<input type="text" name = "email" class="form-control" id="email">
 				<label for="email">Your Email</label>
 			</div>
 			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="password" name = "password" class="form-control" id="password">
+				<label for="password">enter password</label>
+			</div>
+			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" class="form-control" id="college-name">
+				<input type="text" name = "college" class="form-control" id="college-name">
 				<label for="college-name">College Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" class="form-control" id="mobile">
+				<input type="text" name = "mobile" class="form-control" id="mobile">
 				<label for="mobile">Contact Number</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" class="form-control" id="github">
+				<input type="text" name = "github" class="form-control" id="github">
 				<label for="github">Github Link</label>
 			</div>
-			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+			<!-- <button class="btn btn-deep-orange" type = "submit" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
+						<button type="submit" form="form1" value="Submit" class="event-link">Submit</button>
 		</form>
 		<p></p><br>
 	</div>
@@ -314,38 +356,43 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 		</div>
 </div>
 
-<div class="form1 hide forms">
+<div class="form1 hide forms" >
 	<div class="container">
 		<br>
 		<h3 style="color: #fff;">Register for CodeBonanza</h3>
 
-		<form>
+		<form id = "form2" action="https://formspree.io/iosdmait@iosd.tech" method = "post">
+			<input type="hidden" name="_subject" value="code bonanza" />
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" class="form-control" id="name">
+				<input type="text" name = "name" class="form-control" id="name">
 				<label for="name">Your Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" class="form-control" id="email">
+				<input type="text" name = "email" class="form-control" id="email">
 				<label for="email">Your Email</label>
 			</div>
+		
 			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" class="form-control" id="college-name">
+				<input type="text" name = "college" class="form-control" id="college-name">
 				<label for="college-name">College Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" class="form-control" id="mobile">
+				<input type="text" name = "mobile" class="form-control" id="mobile">
 				<label for="mobile">Contact Number</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" class="form-control" id="github">
+				<input type="text" name = "github" class="form-control" id="github">
 				<label for="github">Github Link</label>
 			</div>
-			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+			<button type="submit" form="form2" value="Submit" class="event-link2">Submit</button>
+
+
+			<!-- <button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
 		</form>
 		<p></p><br>
 	</div>
@@ -353,8 +400,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 
 
 <div class="row event-row row2" >
-	    <!-- <div class="col-md-6  poster">
-				<img src="/images/poster.jpg" alt="poster">
+	        <!-- <div class="col-md-6  poster">
+				<img src="/images/poster.jpg" alt="poster"> 
 			</div> -->
 			<div class="col-md-6  content content2 event3">
 					<span class ="event_header2">CodeBonanza</span>
@@ -378,6 +425,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 		<br>
 		<h3 style="color: #000;">Register for MaitHacks</h3>
 
+		<form id = "form3" action="https://formspree.io/iosdmait@iosd.tech" method = "post">
+			<input type="hidden" name="_subject" value="code bonanza" />
 		<form>
 
 			<div class="md-form">
@@ -388,30 +437,32 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" class="form-control" id="name">
+				<input type="text" name = "name" class="form-control" id="name">
 				<label for="name">Your Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" class="form-control" id="email">
+				<input type="text" name = "email"class="form-control" id="email">
 				<label for="email">Your Email</label>
 			</div>
+		
 			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" class="form-control" id="college-name">
+				<input type="text" name = "college" class="form-control" id="college-name">
 				<label for="college-name">College Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" class="form-control" id="mobile">
+				<input type="text" name = "mobile" class="form-control" id="mobile">
 				<label for="mobile">Contact Number</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" class="form-control" id="github">
+				<input type="text" name = "github" class="form-control" id="github">
 				<label for="github">Github Link</label>
 			</div>
-			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+			<!-- <button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
+			<button type="submit" form="form3" value="Submit" class="event-link">Submit</button>
 		</form>
 		<p></p><br>
 	</div>
@@ -430,33 +481,41 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptates facere, 
 		<br>
 		<h3 style="color: #fff;">Register for CodeBonanza</h3>
 
+		<form action="https://formspree.io/iosdmait@iosd.tech" method = "post" >
+
+			<input type="hidden" name="_subject" value="mait hacks" />
+
+
 		<form>
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" class="form-control" id="name">
+				<input type="text" name = "name" class="form-control" id="name">
 				<label for="name">Your Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" class="form-control" id="email">
+				<input type="text" name = "email" class="form-control" id="email">
 				<label for="email">Your Email</label>
 			</div>
+			
 			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" class="form-control" id="college-name">
+				<input type="text" name = "college" class="form-control" id="college-name">
 				<label for="college-name">College Name</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" class="form-control" id="mobile">
+				<input type="text" name = "mobile" class="form-control" id="mobile">
 				<label for="mobile">Contact Number</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" class="form-control" id="github">
+				<input type="text" name = "github" class="form-control" id="github">
 				<label for="github">Github Link</label>
 			</div>
-			<button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button>
+			<!-- <button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
+			<!-- <button type="submit" form="form4" value="Submit">Submit</button> -->
+			<input type="submit" value="Submit" class ="event-link2">
 		</form>
 		<p></p><br>
 	</div>
