@@ -531,9 +531,9 @@ th {
   padding: 0;
 }
 /* 2. Global classes */
-html {
+/* html {
   overflow-y: scroll;
-}
+} */
 html,
 body {
   height: 100% !important;
@@ -3010,7 +3010,17 @@ border: none;
   display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px)
+{
+  .event2, .event3 {
+    display: block;
+  }
+  .event_hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px){
   .event2, .event3 {
     display: none;
   }
