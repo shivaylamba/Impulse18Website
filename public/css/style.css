@@ -1563,13 +1563,18 @@ transform: scaleX(-1)*/;
 	14. Contacts block
 */
 #contacts {
-  background: #AC94DD;
-  color: #171C62;
+  background: #4a4b4c;
+  color: #f4f6f9;
   padding: 30px 0;
   font-weight: 900;
 }
+
+#contacts a {
+  color:#f4f6f9;
+}
+
 #contacts h4 {
-  color: #fff;
+  color: #f4f6f9;
   text-transform: uppercase;
   font-size: 18px;
   margin-bottom: 0;
@@ -1600,7 +1605,7 @@ transform: scaleX(-1)*/;
 	15. Footer and copyrights
 */
 footer {
-  background: #171C62;
+  background: #000;
   color: #fff;
   text-align: center;
   padding: 50px 0 50px;
@@ -1657,12 +1662,12 @@ footer .menu-footer li.active a {
 }
 @media (max-width: 1000px) {
   footer .menu-footer {
-    padding: 20px 0;
+    /*padding: 20px 0;*/
   }
   footer .menu-footer li {
-    float: left;
-    width: 50.0%;
-    margin: 5px 0;
+    /*float: left;*/
+    /*width: 50.0%;*/
+    /*margin: 5px 0;*/
   }
 }
 footer .plan {
@@ -1706,7 +1711,7 @@ footer .plan .fa {
   margin-right: 10px;
 }
 footer .copy {
-  color: #AC94DD;
+  color: #fff;
   margin: 20px 0;
 }
  .iosdlink : hover {
@@ -1715,7 +1720,7 @@ color: #AC94DD;
   }
 @media (max-width: 991px) {
   footer .social {
-    margin: 0px 0px 20px;
+    /*margin: 0px 0px 20px;*/
   }
 }
  
@@ -1726,19 +1731,29 @@ footer .social a {
   font-size: 20px;
   width: 40px;
   height: 40px;
-  background: #AC94DD;
-  color: #fff;
+  background: #d2d5d8;
+  color: #000;
   transition: background .5s ease;
 }
 footer .social a:hover {
-  background: #AC3A6D;
+  background: #4a4b4c;
   color: #fff;
 }
-@media (max-width: 768px) {
-  footer {
-    padding: 30px 0 10px;
+@media (max-width: 387px) and (min-width:350px) {
+  footer .social li a {
+    margin:0 5px;
   }
 }
+@media (max-width: 350px) {
+  footer .social li a {
+    margin:0 auto;
+  }
+}
+
+
+
+
+
 /* 16. Social links */
 .social {
   list-style: none;
