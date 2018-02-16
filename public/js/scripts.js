@@ -27,41 +27,50 @@ function initSliders() {
 
 }
 
-if(window.innerWidth <=767)
-	{
-		var content2 = document.querySelector('.row2 > .content2');
-    var content = document.querySelector('.row2 > .content');
-		var row2 = document.querySelector('.row2');
+// if(window.innerWidth <=767)
+// 	{
+// 		var content2 = document.querySelector('.row2 > .content2');
+//     var content = document.querySelector('.row2 > .content');
+// 		var row2 = document.querySelector('.row2');
 		
-		//var temp = content2.cloneNode(true);
-		row2.removeChild(row2.firstChild);
-		row2.appendChild(content2);
-	}
-
-
-
-window.addEventListener('resize',function(){
-	if(window.innerWidth <=767)
-	{
-		var content2 = document.querySelector('.row2 > .content2');
-    var content = document.querySelector('.row2 > .content');
-		var row2 = document.querySelector('.row2');
+// 		//var temp = content2.cloneNode(true);
+// 		row2.removeChild(row2.firstChild);
+// 		row2.appendChild(content2);
+// 	}
+// 	else{
+// 		var content2 = document.querySelector('.row2 > .content2');
+//     var content = document.querySelector('.row2 > .content');
+// 		var row2 = document.querySelector('.row2');
 		
-		//var temp = content2.cloneNode(true);
-		row2.removeChild(row2.firstChild);
-		row2.appendChild(content2);
-	}
+// 		// var temp = content.cloneNode(true);
+// 		row2.removeChild(row2.firstChild);
+// 		row2.insertBefore(content2,row2.firstChild);
+// 	}
 
-	else{
-		var content2 = document.querySelector('.row2 > .content2');
-    var content = document.querySelector('.row2 > .content');
-		var row2 = document.querySelector('.row2');
+
+
+// window.addEventListener('resize',function(){
+// 	if(window.innerWidth <=767)
+// 	{
+// 		var content2 = document.querySelector('.row2 > .content2');
+//     var content = document.querySelector('.row2 > .content');
+// 		var row2 = document.querySelector('.row2');
 		
-		// var temp = content.cloneNode(true);
-		row2.removeChild(row2.firstChild);
-		row2.insertBefore(content2,row2.firstChild);
-	}
-})
+// 		//var temp = content2.cloneNode(true);
+// 		row2.removeChild(row2.firstChild);
+// 		row2.appendChild(content2);
+// 	}
+
+// 	else{
+// 		var content2 = document.querySelector('.row2 > .content2');
+//     var content = document.querySelector('.row2 > .content');
+// 		var row2 = document.querySelector('.row2');
+		
+// 		// var temp = content.cloneNode(true);
+// 		row2.removeChild(row2.firstChild);
+// 		row2.insertBefore(content2,row2.firstChild);
+// 	}
+// })
 
 
 /* All keyboard and mouse events */

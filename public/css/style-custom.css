@@ -277,6 +277,64 @@ video{
 }
 /* //TEASER SECTION */
 
+/* RULEBOOK SECTION */
+.modal_type1{
+    color: black;
+}
+
+.modal_type2{
+    color: white;
+}
+
+.modal_type2 .modal-content{
+    background-color: #191919;
+}
+.modal_type1 .modal-header{
+    text-align: left;
+}
+.modal_type1 .modal-title{
+    font-family:'Lato', sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 40px;
+}
+
+.modal_type2 .modal-title{
+    font-family:'Lato', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+}
+
+.modal_type1 .round{
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.modal_type2 .round{
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.modal_type1 .end, .modal_type2 .end{
+    font-weight: 400;
+}
+
+.modal_type2 .close{
+    color: white;
+}
+/* //RULEBOOK SECTION */
+
 /* EVENTS SECTION */
 
 #event_title{
@@ -381,7 +439,6 @@ video{
 /* //EVENTS SECTION */
 
 /* GALLERY SECTION */
-
 #gallery{
     background-image: url("../images/dark-pattern.gif");
 }
@@ -389,7 +446,6 @@ video{
 .gallery{
     padding-top: 0px;
 }
-
 /* //GALLERY SECTION*/
 
 
