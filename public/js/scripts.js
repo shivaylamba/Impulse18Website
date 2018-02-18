@@ -1,31 +1,159 @@
 $(document).on('ready', function() {
  
  	initSliders();
+ 	initScrollAnimation();
+ 	$('.swipebox').swipebox({autoplayVideos: true});
 });
 
 /* Swiper slider */
 function initSliders() {
 
-    var gallerySwiper = new Swiper('.swiper-container', {
+    var gallerySwiper = new Swiper('#gallery-slider', {
 		direction   : 'horizontal',
 
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-		speed		: 800,
+        slidesPerView: 4,
+        slidesPerColumn: 1,
+
+		speed		: 1000,
 		nextButton	: '.arrow-right',
 		prevButton	: '.arrow-left',
-		keyboardControl: true,
-		grabCursor: true,
-		effect: 'slide',
-		autoplay    : 6000,
-		autoplayDisableOnInteraction: false,
-		
-   
+	
+		autoplay    : 7000,
+		autoplayDisableOnInteraction	: false,
     });
 
+	$(window).on('resize', function(){
+
+		var ww = $(window).width()
+		if (ww > 1000) { gallerySwiper.params.slidesPerView = 4; }
+		if (ww > 768 && ww <= 1000) { gallerySwiper.params.slidesPerView = 3; }
+		if (ww > 480 && ww <= 767) { gallerySwiper.params.slidesPerView = 2; }
+		if (ww <= 479) { gallerySwiper.params.slidesPerView = 1; }
+
+		gallerySwiper.update();
+	}).resize();
+
 }
+function initScrollAnimation() {
+
+	window.sr = ScrollReveal();
+
+	var scrollZoomIn = {
+		duration: 400,
+		scale    : 0.1,
+		mobile: false,
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s ease'); }
+	};
+
+	var scrollGalleryIn = {
+		duration: 400,
+		scale    : 0.1,
+		mobile: false,
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s ease'); }
+	};
+
+	var scrollTextFade = {
+		duration: 2000,
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s linear'); }
+	}
+
+	var scrollTextFade2 = {
+		duration: 400,
+		opacity: 0,
+		scale: 1,
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s linear'); }
+	}
+
+
+	var scrollFromLeft = {
+		duration: 700,
+		scale: 1,
+		distance: '600px',
+		origin:'left',
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s linear'); }
+	}
+
+	var scrollFromLeft2 = {
+		duration: 500,
+		scale: 1,
+		easing: 'linear',
+		distance: '600px',
+		origin:'left',
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s ease'); }
+	}
+
+	var scrollFromTop = {
+		duration: 500,
+		scale: 1,
+		easing: 'linear',
+		distance: '600px',
+		origin:'top',
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s ease'); }
+	}
+
+	var scrollFromRight = {
+		duration: 700,
+		scale: 1,
+		distance: '600px',
+		origin:'right',
+		mobile: false,		
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s linear'); }
+	}
+
+	var scrollSliderFull = {
+		duration: 1200,
+		scale : 1,
+		easing   : 'ease-in-out',
+		distance : '0px',
+		mobile: false,			
+		afterReveal: function (domEl) { $(domEl).css('transition', 'all .3s ease'); }
+	}
+
+	/* Every element initialized once */
+	if ($('#slider-full').length) {
+
+		sr.reveal('#slider-full span, #slider-full h1', scrollTextFade);
+	}
+
+	if ($('#prizes').length) {
+
+		sr.reveal('#prizes .item-left', scrollFromLeft);
+		sr.reveal('#prizes .item-center', scrollZoomIn);
+		sr.reveal('#prizes .item-right', scrollFromRight);
+	}
+	
+	if ($('#gallery').length) {
+
+		sr.reveal('#gallery img', scrollGalleryIn, 40);
+	}	
+
+	if ($('footer').length) {
+
+		sr.reveal('footer li, footer .date, footer .time', scrollTextFade2, 30);
+	}	
+	if ($('#team .person_vinay').length) {
+		sr.reveal('#team .person_vinay img', scrollGalleryIn, 40);
+	}
+	if ($('#team .row1').length) {
+		sr.reveal('#team .row1 img', scrollGalleryIn, 40);
+	}
+	if ($('#team .row2').length) {
+		sr.reveal('#team .row2 img', scrollGalleryIn, 40);
+	}
+	if ($('#team .row3').length) {
+		sr.reveal('#team .row3 img', scrollGalleryIn, 40);
+	}
+	if ($('#team .row4').length) {
+		sr.reveal('#team .row4 img', scrollGalleryIn, 40);
+	}
+
+}
+
 
 // if(window.innerWidth <=767)
 // 	{
