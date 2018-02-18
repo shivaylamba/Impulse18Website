@@ -3,6 +3,10 @@ const path = require('path')
 const hbs = require('hbs')
 const PORT = process.env.PORT || 3000
 var app = express();
+// var popup = require('popups');
+alert = require('alert-node');
+
+
 
 
 app.set('view engine', 'hbs');
@@ -110,9 +114,10 @@ var User4 = require('./models/user_code');
        }
 
        var myData4 = new User2(req.body);
-       myData4.save()
+       myData4.save(s)
        .then(item => {
-       res.send("item saved to database");
+        alert('successfully submitted!');
+        res.redirect('/');
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
@@ -154,10 +159,15 @@ app.post('/uiux', function (req, res, next) {
        var myData2 = new User2(req.body);
        myData2.save()
        .then(item => {
-       res.send("item saved to database");
+      //   popup.alert({
+      //     content: 'successfully submitted'
+      // });
+      alert('successfully submitted!');
+      res.redirect('/');
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
+       console.log(err);
        });
   }
    else {
@@ -196,7 +206,8 @@ app.post('/uiux', function (req, res, next) {
        var myData3 = new User3(req.body);
        myData3.save()
        .then(item => {
-       res.send("item saved to database");
+        alert('successfully submitted!');
+        res.redirect('/');
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
@@ -223,6 +234,7 @@ app.post('/uiux', function (req, res, next) {
   
     if (req.body.email &&
       req.body.name &&
+      req.body.password &&
       req.body.github &&
       req.body.mobile &&
       req.body.college 
@@ -232,29 +244,43 @@ app.post('/uiux', function (req, res, next) {
       var userData = {
         email: req.body.email,
         name: req.body.name,
+        password: req.body.password,
         college:  req.body.college,
         github:   req.body.github,
-        mobile:   req.body.mobile,
+        mobile:   req.body.mobile
+        ,
         teamname: req.body.teamname
          }
-      
-           var myData = new User(req.body);
-           myData.save()
-           .then(item => {
-           res.send("item saved to database");
-           })
-           .catch(err => {
-           res.status(400).send("unable to save to database");
-           });
-      }
-       else {
-        var err = new Error('All fields required.');
-        err.status = 400;
-        return next(err);
-      }
-
-
+  
+      User.create(userData, function (error, user) {
+        if (error) {
+          return next(error);
+        } else {
+          
+          req.session.userId = user._id;
+          return res.redirect('/profile');
+        }
+      });
+  
+    } else if (req.body.email && req.body.password) {
+      User.authenticate(req.body.email, req.body.password, function (error, user) {
+        if (error || !user) {
+          var err = new Error('Wrong email or password.');
+          err.status = 401;
+          return next(err);
+        } else {
+          req.session.userId = user._id;
+          return res.redirect('/profile');
+        }
+      });
+    } else {
+      var err = new Error('All fields required.');
+      err.status = 400;
+      return next(err);
+    }
   });
+
+
   
   // GET route after registering
   app.get('/profile', function (req, res, next) {
