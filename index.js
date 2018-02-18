@@ -14,7 +14,8 @@ var MongoStore = require('connect-mongo')(session);
 
 
 // mongoose.connect('mongodb://localhost/impulse');
-mongoose.connect('mongodb://iosdmait:iosdmait@123@ds239648.mlab.com:39648/impulse18');
+// const dburl =  'mongodb://iosdmait:iosdmait12344321@ds239648.mlab.com:39648/impulse18'
+mongoose.connect('mongodb://public:iosdpublic123@ds239648.mlab.com:39648/impulse18');
 var db = mongoose.connection;
 
 // //handle mongo error
@@ -237,7 +238,7 @@ app.post('/uiux', function (req, res, next) {
         teamname: req.body.teamname
          }
       
-           var myData = new User3(req.body);
+           var myData = new User(req.body);
            myData.save()
            .then(item => {
            res.send("item saved to database");
