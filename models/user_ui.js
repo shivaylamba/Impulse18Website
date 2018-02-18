@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
-var UserSchema = new mongoose.Schema({
+var User2Schema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
@@ -26,16 +26,10 @@ var UserSchema = new mongoose.Schema({
       type:String,
       required:true
   
-  },
-  teamname:{
-    type:String,
-    required: false
   }
-
 
 });
 
-
-var User = mongoose.model('maithacks', UserSchema);
-module.exports = User;
+var User2 = mongoose.model('UI/UX', User2Schema);
+module.exports = User2;
 
