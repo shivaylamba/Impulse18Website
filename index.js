@@ -1,10 +1,11 @@
 const express = require('express')
 const path = require('path')
+const hbs = require('hbs')
 const PORT = process.env.PORT || 3000
 var app = express();
 
 
-app.set('view engine', 'jade');
+app.set('view engine', 'hbs');
 
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -146,13 +147,20 @@ var User = require('./models/user');
             err.status = 400;
             return next(err);
           } else {
-            return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + 
-            + '<h2>github: </h2>' + user.github 
-            + '<h2>college: </h2>' + user.college 
-            + '<h2>mobile: </h2>' + user.mobile 
-            + '<h2>team name: </h2>' + user.teamname +
-
-            '<br><a type="button" href="/logout">Logout</a>')
+            // return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + 
+            // + '<h2>github: </h2>' + user.github 
+            // + '<h2>college: </h2>' + user.college 
+            // + '<h2>mobile: </h2>' + user.mobile 
+            // + '<h2>team name: </h2>' + user.teamname +
+            // '<br><a type="button" href="/logout">Logout</a>')
+            return res.render('profile.hbs',{
+              'name': user.name,
+              'email': user.email,
+              'github': user.github,
+              'college': user.college,
+              'mobile': user.mobile,
+              'team': user.teamname
+            })
           }
         }
       });

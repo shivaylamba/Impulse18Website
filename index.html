@@ -30,16 +30,14 @@
 	 <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,700" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
-
-	  <script src="js/jquery.min.js"></script>
-	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 
 
  </head>
  <body data-spy="scroll" data-offset="120" data-target="#navbar">
 
 <nav class="navbar navbar-expand-lg fixed-top">
-	<a class="navbar-brand" href="#"><img src="/images/impulse-full.png" alt="logo" style="height:70px;"></a>
+	<a class="navbar-brand" href="#"><img src="/images/impulse-full.png" alt="logo"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon">
 		</span>
@@ -51,7 +49,7 @@
 		  <a class="nav-link" href="#agenda">Agenda</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="#video">Teaser</a>
+		  <a class="nav-link" href="#teaser">Teaser</a>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link" href="#events">Events</a>
@@ -197,7 +195,7 @@
 </div>
 
 
-<div class="parallax-container">
+<div class="parallax-container" id="teaser">
 
 	 <h2 class="teaser"></h2>
 	 <video  controls>
@@ -357,11 +355,11 @@ Cyberspace never disappoints anyone !
 				<input type="text" name = "email" class="form-control" id="email">
 				<label for="email">Your Email</label>
 			</div>
-			<!-- <div class="md-form">
+			 <div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
 				<input type="password" name = "password" class="form-control" id="password">
-				<label for="password">Enter Password</label>
-			</div> -->
+				<label for="password">Enter Password For Login Portal</label>
+			</div> 
 			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
 				<input type="text" name = "college" class="form-control" id="college-name">
@@ -863,7 +861,7 @@ Further details to be disclosed soon.
         animate: 'slide'
 		});
 	 </script>
-	 <script async defer
+	 <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW446HJI8wJ3URpiKYQc73AAw4EAsBfq4&callback=initMap">
     </script>
 	 <!-- <script type="text/javascript" src="js/scripts.js"></script> -->
