@@ -232,23 +232,40 @@ app.post('/uiux', function (req, res, next) {
     //   return next(err);
     // }
   
-    if (req.body.email &&
-      req.body.name &&
+    if (req.body.email1 &&
+      req.body.name1 &&
+      req.body.mobile1 &&
+      req.body.email2 &&
+      req.body.name2 &&
+      req.body.mobile2 &&
+      req.body.email3 &&
+      req.body.name3 &&
+      req.body.mobile3 &&
+      req.body.email4 &&
+      req.body.name4 &&
+      req.body.mobile4 &&
       req.body.password &&
       req.body.github &&
-      req.body.mobile &&
       req.body.college 
       && req.body.teamname  
     ) {
   
       var userData = {
-        email: req.body.email,
-        name: req.body.name,
+      email1:  req.body.email1,
+     name1:  req.body.name1,
+     mobile1: req.body.mobile1,
+     email2: req.body.email2,
+     name2: req.body.name2,
+     mobile2: req.body.mobile2,
+      email3: req.body.email3,
+      name3: req.body.name3,
+      mobile3: req.body.mobile3,
+      email4: req.body.email4,
+      name4: req.body.name4,
+      mobile4: req.body.mobile4,
         password: req.body.password,
         college:  req.body.college,
         github:   req.body.github,
-        mobile:   req.body.mobile
-        ,
         teamname: req.body.teamname
          }
   
@@ -270,7 +287,7 @@ app.post('/uiux', function (req, res, next) {
           return next(err);
         } else {
           req.session.userId = user._id;
-          return res.redirect('/profile');
+          return res.redirect('/');
         }
       });
     } else {

@@ -2,26 +2,72 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
 var UserSchema = new mongoose.Schema({
-  email: {
+  email1: {
     type: String,
     unique: true,
     required: true,
     trim: true
   },
-  name: {
+  name1: {
     type: String,
     // unique: true,
     required: true,
     trim: true
   },
-  password:{
-    type:String,
-    required:true
-  },
-  mobile:{
-      type: String,
-      required: true
-  },
+  mobile1:{
+    type: String,
+    required: true
+},
+email2: {
+  type: String,
+  unique: true,
+  required: false,
+  trim: true
+},
+name2: {
+  type: String,
+  // unique: true,
+  required: false,
+  trim: true
+},
+mobile2:{
+  type: String,
+  required: false
+},
+email3: {
+  type: String,
+  unique: true,
+  required: false,
+  trim: true
+},
+name3: {
+  type: String,
+  // unique: true,
+  required: false,
+  trim: true
+},
+mobile3:{
+  type: String,
+  required: false
+},
+email4: {
+  type: String,
+  unique: true,
+  required: false,
+  trim: true
+},
+name4: {
+  type: String,
+  // unique: true,
+  required: false,
+  trim: true
+},
+mobile4:{
+  type: String,
+  required: false
+},
+ 
+ 
   college:{
       type: String,
       required:true
@@ -33,7 +79,8 @@ var UserSchema = new mongoose.Schema({
   },
   teamname:{
     type:String,
-    required: false
+    required: true,
+    unique: true
   }
 
 
