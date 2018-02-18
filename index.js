@@ -114,7 +114,7 @@ var User4 = require('./models/user_code');
        }
 
        var myData4 = new User2(req.body);
-       myData4.save(s)
+       myData4.save()
        .then(item => {
         alert('successfully submitted!');
         res.redirect('/');
