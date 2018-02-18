@@ -63,6 +63,9 @@
 		<li class="nav-item">
 		  <a class="nav-link" href="#gallery">Gallery</a>
 		</li>
+		<!-- <li class="nav-item">
+			<a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
+		  </li> -->
 		<!-- <li class="nav-item"> -->
 		  <!-- <a class="nav-link" href="#form">Register</a> -->
 		<!-- </li> -->
@@ -281,6 +284,63 @@
 	  </div>
 	</div>
   </div>
+  <div class="modal fade modal_type2" id="ui_rulebook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">UI/UX Rules</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <p class="event-brief">Time to make lives simpler!
+			If you got the talent
+			Participate in this event or you will lament <br>
+			UI/UX Designing will consist of 2 rounds.</p>
+		  <h4 class="round">ROUND 1</h4>
+		  <p class="round-detail">It will be an online round. The participants need to send their best work at iosdmait@iosd.tech  <br>
+			Participants with the best work will be selected for Round 2. </p>
+
+			<h4 class="round">Round 2</h4>
+			<p class="round-detail">This will be an offline round. It will be held in the MAIT Campus on 9 March 2018 from 2-5 p.m. The selected participants will have to design a UI/UX on the themes which will be given on the spot. </p>
+			<br><br>
+			<p class="end">Only Photoshop and Illustrator should be used.
+				The files should be in psd ai format. <br>
+				Plagiarised designs will not be accepted.
+				Participants should carry their own laptops.
+				<br><br>
+				Designers, time to get down to work!</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+  <!-- <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <form id="loginform" action="" method="">
+			<div class="form-group">
+                <label for="">Email</label>
+                <input type="email" placeholder="Email" class="form-control1">
+			</div>
+			<div class="form-group">
+				<label for="">Password</label>
+                <input type="password" placeholder="Enter password" class="form-control1">
+			</div>
+			<button type="submit" form="loginform" value="Submit" >Login</button>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </div> -->
 
 <!-- Rulebook Popup end -->
 
@@ -348,32 +408,78 @@ Cyberspace never disappoints anyone !
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
 				<input type="text" name = "name" class="form-control" id="name">
-				<label for="name">Your Name</label>
+				<label for="name">Name of Team Leader</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
 				<input type="text" name = "email" class="form-control" id="email">
-				<label for="email">Your Email</label>
-			</div>
-			 <div class="md-form">
-				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="password" name = "password" class="form-control" id="password">
-				<label for="password">Enter Password For Login Portal</label>
-			</div> 
-			<div class="md-form">
-				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" name = "college" class="form-control" id="college-name">
-				<label for="college-name">College Name</label>
+				<label for="email">Email of Team Leader</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
 				<input type="text" name = "mobile" class="form-control" id="mobile">
-				<label for="mobile">Contact Number</label>
+				<label for="mobile">Contact Number of Team Leader</label>
 			</div>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" name = "name" class="form-control" id="name">
+				<label for="name">Name of Member 2</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" name = "email" class="form-control" id="email">
+				<label for="email">Email of Member 2</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" name = "mobile" class="form-control" id="mobile">
+				<label for="mobile">Contact Number of Member 2</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" name = "name" class="form-control" id="name">
+				<label for="name">Name of Member 3</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" name = "email" class="form-control" id="email">
+				<label for="email">Email of Member 3</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" name = "mobile" class="form-control" id="mobile">
+				<label for="mobile">Contact Number of Member 3</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-user prefix grey-text"></i>
+				<input type="text" name = "name" class="form-control" id="name">
+				<label for="name">Name of Member 4</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="text" name = "email" class="form-control" id="email">
+				<label for="email">Email of Member 4</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-mobile prefix grey-text"></i>
+				<input type="text" name = "mobile" class="form-control" id="mobile">
+				<label for="mobile">Contact Number of Member 4</label>
+			</div>
+			 <!-- <div class="md-form">
+				<i class="fa fa-envelope prefix grey-text"></i>
+				<input type="password" name = "password" class="form-control" id="password">
+				<label for="password">Create Password</label>
+			</div>  -->
+			<div class="md-form">
+				<i class="fa fa-graduation-cap prefix grey-text"></i>
+				<input type="text" name = "college" class="form-control" id="college-name">
+				<label for="college-name">College Name Of Team Leader</label>
+			</div>
+			
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
 				<input type="text" name = "github" class="form-control" id="github">
-				<label for="github">Github Link</label>
+				<label for="github">Github Link of Team Leader</label>
 			</div>
 			<!-- <button class="btn btn-deep-orange" type = "submit" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
 						<button type="submit" form="form1" value="Submit" class="event-link">Submit</button>
@@ -457,7 +563,7 @@ Cyberspace never disappoints anyone !
 
 						Don't leave a bug in the system or it's gonna crash and fall!</p>
 					<span class="event-link2 form3_trigger" style="cursor: pointer;">REGISTER</span>
-					<span class="event-link2" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">View RuleBook</span>
+					<span class="event-link2" data-toggle="modal" data-target="#ui_rulebook" style="cursor: pointer;">View RuleBook</span>
 
 			</div>
 			<div class="col-md-6  content event4">
@@ -540,7 +646,7 @@ Further details to be disclosed soon.
 
 			Don't leave a bug in the system or it's gonna crash and fall!</p>
 		<span class="event-link2 form3_trigger" style="cursor: pointer;">REGISTER</span>
-		<span class="event-link2" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">View RuleBook</span>
+		<span class="event-link2" data-toggle="modal" data-target="#ui_rulebook" style="cursor: pointer;">View RuleBook</span>
 			</div>
 </div>
 <div class="form3 hide forms">
