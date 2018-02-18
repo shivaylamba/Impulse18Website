@@ -222,7 +222,7 @@
     padding-top: 200px;
 }
 
-.march-9,.march-10{
+.dates{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     padding-top: 30px;
@@ -242,7 +242,7 @@
     padding: 20px;
 }
 
-#timeline h3, #timeline1 h3{
+#timeline h3, #timeline1 h3, #timeline2 h3{
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     color: black;
@@ -583,6 +583,9 @@ video{
     }
     .timer-day,.timer-hour,.timer-minute,.timer-second{
         font-size: 65px;
+    }
+    .hidden_header{
+        line-height: 50px;
     }
 }
 @media screen and (max-width: 420px){
