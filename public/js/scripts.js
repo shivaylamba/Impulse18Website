@@ -25,9 +25,29 @@ $(document).on('ready', function() {
        $(".form4_trigger").on('click', function(){
         $('div.forms:not(div.form4)').slideUp(speed);
         $('div.form4').slideToggle(speed);
-        
+		});
+		
+	// 	$('.submit-btn').on('click', function(event){
+	// 		event.preventDefault();
+	// 		event.stopPropagation();
+	// 		var formElement = $(this).parents('form');
+	// 		formElement.find('input:required').each(function(){
+	// 				var minLength = 1;
+	// 				var value = $(this).val();
+	// 				var checked = true;
+	// 				if(value.trim().length < minLength) {
+	// 						console.log('length is not ok');
+	// 						checked = false;
+	// 				}
 
-    });
+	// 				if(!checked){
+	// 						alert('All required form Values are not filled correctly!');
+	// 				} else {
+	// 						console.log('all is ok');
+	// 						formElement.submit();
+	// 				}
+	// 		});
+	// });
 });
 
 /* Swiper slider */
