@@ -1,10 +1,15 @@
 const express = require('express')
 const path = require('path')
+const hbs = require('hbs')
 const PORT = process.env.PORT || 3000
 var app = express();
+// var popup = require('popups');
+alert = require('alert-node');
 
 
-app.set('view engine', 'jade');
+
+
+app.set('view engine', 'hbs');
 
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -13,7 +18,8 @@ var MongoStore = require('connect-mongo')(session);
 
 
 // mongoose.connect('mongodb://localhost/impulse');
-mongoose.connect('mongodb://sidkathuria:password@ds123956.mlab.com:23956/impulseiosd');
+// const dburl =  'mongodb://iosdmait:iosdmait12344321@ds239648.mlab.com:39648/impulse18'
+mongoose.connect('mongodb://public:iosdpublic123@ds239648.mlab.com:39648/impulse18');
 var db = mongoose.connection;
 
 // //handle mongo error
@@ -74,9 +80,154 @@ res.send('hello');
 
 // var router = express.Router();
 var User = require('./models/user');
+var User2 = require('./models/user_ui');
+var User3 = require('./models/user_workshop');
+var User4 = require('./models/user_code');
+
 // var path = require('path');
  //POST route for updating data
- app.post('/', function (req, res, next) {
+
+ app.post('/codebonanza', function (req, res, next) {
+  // confirm that user typed same password twice
+  console.log('/post')
+  // if (req.body.password !== req.body.passwordConf) {
+  //   var err = new Error('Passwords do not match.');
+  //   err.status = 400;
+  //   res.send("passwords dont match");
+  //   return next(err);
+  // }
+
+  if (req.body.email &&
+    req.body.name &&
+    req.body.github &&
+    req.body.mobile &&
+    req.body.college 
+   
+  ) {
+
+    var user4Data = {
+      email: req.body.email,
+      name: req.body.name,
+      college:  req.body.college,
+      github:   req.body.github,
+      mobile:   req.body.mobile
+       }
+
+       var myData4 = new User4(req.body);
+       myData4.save()
+       .then(item => {
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
+       })
+       .catch(err => {
+       res.status(400).send("unable to save to database");
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
+});
+
+app.post('/uiux', function (req, res, next) {
+  // confirm that user typed same password twice
+  console.log('/post')
+  // if (req.body.password !== req.body.passwordConf) {
+  //   var err = new Error('Passwords do not match.');
+  //   err.status = 400;
+  //   res.send("passwords dont match");
+  //   return next(err);
+  // }
+
+  if (req.body.email &&
+    req.body.name &&
+    req.body.github &&
+    req.body.mobile &&
+    req.body.college 
+   
+  ) {
+
+    var user2Data = {
+      email: req.body.email,
+      name: req.body.name,
+      college:  req.body.college,
+      github:   req.body.github,
+      mobile:   req.body.mobile
+       }
+
+       var myData2 = new User2(req.body);
+       myData2.save()
+       .then(item => {
+      //   popup.alert({
+      //     content: 'successfully submitted'
+      // });
+      // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
+      // res.send('<script>alert("successfully submitted!")</script>');
+  
+       })
+       .catch(err => {
+       res.status(400).send("unable to save to database");
+       console.log(err);
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
+});
+
+ app.post('/workshop', function (req, res, next) {
+  // confirm that user typed same password twice
+  console.log('/post')
+  // if (req.body.password !== req.body.passwordConf) {
+  //   var err = new Error('Passwords do not match.');
+  //   err.status = 400;
+  //   res.send("passwords dont match");
+  //   return next(err);
+  // }
+
+  if (req.body.email &&
+    req.body.name &&
+    req.body.github &&
+    req.body.mobile &&
+    req.body.college 
+   
+  ) {
+
+    var user3Data = {
+      email: req.body.email,
+      name: req.body.name,
+      college:  req.body.college,
+      github:   req.body.github,
+      mobile:   req.body.mobile
+       }
+
+       var myData3 = new User3(req.body);
+       myData3.save()
+       .then(item => {
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
+       })
+       .catch(err => {
+       res.status(400).send("unable to save to database");
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
+});
+
+
+
+ app.post('/maithacks', function (req, res, next) {
     // confirm that user typed same password twice
     console.log('/post')
     // if (req.body.password !== req.body.passwordConf) {
@@ -86,55 +237,80 @@ var User = require('./models/user');
     //   return next(err);
     // }
   
-    if (req.body.email &&
-      req.body.name &&
-      req.body.password &&
+    if (req.body.email1 &&
+      req.body.name1 &&
+      req.body.mobile1 &&
       req.body.github &&
-      req.body.mobile &&
       req.body.college 
       && req.body.teamname  
     ) {
-  
+
+// if(req.body.name2 == ""){
+//   req.body.name2 = "NA";
+// }
+// if(req.body.name3 == ""){
+//   req.body.name3 = "NA";
+// }
+// if(req.body.name4 == ""){
+//   req.body.name4 = "NA";
+// }
+// if(req.body.mobile2 == ""){
+//   req.body.mobile2 = "NA";
+// }
+// if(req.body.mobile3 == ""){
+//   req.body.mobile3 = "NA";
+// }
+// if(req.body.mobile4 == ""){
+//   req.body.mobile4 = "NA";
+// }
+
       var userData = {
-        email: req.body.email,
-        name: req.body.name,
-        password: req.body.password,
+      email1:  req.body.email1,
+     name1:  req.body.name1,
+     mobile1: req.body.mobile1,
+     
+     name2: req.body.name2,
+     mobile2: req.body.mobile2,
+     email2:  req.body.email2,
+      
+      name3: req.body.name3,
+      mobile3: req.body.mobile3,
+      email3:  req.body.email3,
+      
+      name4: req.body.name4,
+      mobile4: req.body.mobile4,
+      email4:  req.body.email4,
         college:  req.body.college,
         github:   req.body.github,
-        mobile:   req.body.mobile
-        ,
         teamname: req.body.teamname
          }
-  
-      User.create(userData, function (error, user) {
-        if (error) {
-          return next(error);
-        } else {
-          
-          req.session.userId = user._id;
-          return res.redirect('/profile');
-        }
-      });
-  
-    } else if (req.body.email && req.body.password) {
-      User.authenticate(req.body.email, req.body.password, function (error, user) {
-        if (error || !user) {
-          var err = new Error('Wrong email or password.');
-          err.status = 401;
-          return next(err);
-        } else {
-          req.session.userId = user._id;
-          return res.redirect('/profile');
-        }
-      });
-    } else {
-      var err = new Error('All fields required.');
-      err.status = 400;
-      return next(err);
-    }
-  })
+
+         var myData = new User(req.body);
+       myData.save()
+       .then(item => {
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
+       })
+       .catch(err => {
+         console.log(err);
+       res.status(400).send("unable to save to database");
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
+  });
+
+
   
   // GET route after registering
+  app.get('/success', function(req,res,next){
+    res.render('success.hbs')
+  })
+
   app.get('/profile', function (req, res, next) {
     User.findById(req.session.userId)
       .exec(function (error, user) {
@@ -146,13 +322,20 @@ var User = require('./models/user');
             err.status = 400;
             return next(err);
           } else {
-            return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + 
-            + '<h2>github: </h2>' + user.github 
-            + '<h2>college: </h2>' + user.college 
-            + '<h2>mobile: </h2>' + user.mobile 
-            + '<h2>team name: </h2>' + user.teamname +
-
-            '<br><a type="button" href="/logout">Logout</a>')
+            // return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + 
+            // + '<h2>github: </h2>' + user.github 
+            // + '<h2>college: </h2>' + user.college 
+            // + '<h2>mobile: </h2>' + user.mobile 
+            // + '<h2>team name: </h2>' + user.teamname +
+            // '<br><a type="button" href="/logout">Logout</a>')
+            return res.render('profile.hbs',{
+              'name': user.name,
+              'email': user.email,
+              'github': user.github,
+              'college': user.college,
+              'mobile': user.mobile,
+              'team': user.teamname
+            })
           }
         }
       });
@@ -174,5 +357,6 @@ var User = require('./models/user');
   });
   
 // //   module.exports = router;
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
+
 

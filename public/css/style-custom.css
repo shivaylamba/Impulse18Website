@@ -4,6 +4,10 @@
     opacity: 0.85;
 }
 
+.navbar-brand img{
+    height: 70px;
+}
+
 .nav-link{
     color: white;
     font-size: 22px;
@@ -222,7 +226,7 @@
     padding-top: 200px;
 }
 
-.march-9,.march-10{
+.dates{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     padding-top: 30px;
@@ -242,7 +246,7 @@
     padding: 20px;
 }
 
-#timeline h3, #timeline1 h3{
+#timeline h3, #timeline1 h3, #timeline2 h3, #timeline3 h3{
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     color: black;
@@ -356,6 +360,10 @@ video{
     background-color: transparent;
 }
 
+.event-row{
+    border-bottom: 1px solid black;
+}
+
 .event_header, .event_header2{
     font-size: 50px;
     font-family: 'Lato',sans-serif;
@@ -436,7 +444,20 @@ video{
     padding-top: 10px;
     margin: auto;
 }
+
+input[type="date"]:focus:not([readonly]), input[type="datetime-local"]:focus:not([readonly]), input[type="email"]:focus:not([readonly]), input[type="number"]:focus:not([readonly]), input[type="password"]:focus:not([readonly]), input[type="search-md"]:focus:not([readonly]), input[type="search"]:focus:not([readonly]), input[type="tel"]:focus:not([readonly]), input[type="text"]:focus:not([readonly]), input[type="time"]:focus:not([readonly]), input[type="url"]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #DBD5E7;
+}
+
+input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:focus:not([readonly]) + label, input[type="email"]:focus:not([readonly]) + label, input[type="number"]:focus:not([readonly]) + label, input[type="password"]:focus:not([readonly]) + label, input[type="search-md"]:focus:not([readonly]) + label, input[type="search"]:focus:not([readonly]) + label, input[type="tel"]:focus:not([readonly]) + label, input[type="text"]:focus:not([readonly]) + label, input[type="time"]:focus:not([readonly]) + label, input[type="url"]:focus:not([readonly]) + label, textarea.md-textarea:focus:not([readonly]) + label
+{
+    color: #DBD5E7;
+}
+
+
 /* //EVENTS SECTION */
+
+
 
 /* GALLERY SECTION */
 #gallery{
@@ -584,6 +605,17 @@ video{
     .timer-day,.timer-hour,.timer-minute,.timer-second{
         font-size: 65px;
     }
+    .hidden_header{
+        line-height: 50px;
+    }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
 }
 @media screen and (max-width: 420px){
     .timer{
@@ -597,6 +629,56 @@ video{
         font-size: 13px;
         
     }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
+}
+@media screen and (max-width: 414px){
+    .navbar-brand img{
+        height: 50px;
+    }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
+    
+}
+@media screen and (max-width: 390px){
+    .navbar-brand img{
+        height: 50px;
+    }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
+    
+}
+@media screen and (max-width: 340px){
+    .navbar-brand img{
+        height: 40px;
+    }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
+    
 }
 
 
