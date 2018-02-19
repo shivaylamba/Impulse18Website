@@ -164,6 +164,8 @@ app.post('/uiux', function (req, res, next) {
       // });
       alert('successfully submitted!');
       res.redirect('/');
+      // res.send('<script>alert("successfully submitted!")</script>');
+  
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
@@ -235,66 +237,68 @@ app.post('/uiux', function (req, res, next) {
     if (req.body.email1 &&
       req.body.name1 &&
       req.body.mobile1 &&
-      req.body.email2 &&
-      req.body.name2 &&
-      req.body.mobile2 &&
-      req.body.email3 &&
-      req.body.name3 &&
-      req.body.mobile3 &&
-      req.body.email4 &&
-      req.body.name4 &&
-      req.body.mobile4 &&
-      req.body.password &&
       req.body.github &&
       req.body.college 
       && req.body.teamname  
     ) {
-  
+
+// if(req.body.name2 == ""){
+//   req.body.name2 = "NA";
+// }
+// if(req.body.name3 == ""){
+//   req.body.name3 = "NA";
+// }
+// if(req.body.name4 == ""){
+//   req.body.name4 = "NA";
+// }
+// if(req.body.mobile2 == ""){
+//   req.body.mobile2 = "NA";
+// }
+// if(req.body.mobile3 == ""){
+//   req.body.mobile3 = "NA";
+// }
+// if(req.body.mobile4 == ""){
+//   req.body.mobile4 = "NA";
+// }
+
       var userData = {
       email1:  req.body.email1,
      name1:  req.body.name1,
      mobile1: req.body.mobile1,
-     email2: req.body.email2,
+     
      name2: req.body.name2,
      mobile2: req.body.mobile2,
-      email3: req.body.email3,
+     email2:  req.body.email2,
+      
       name3: req.body.name3,
       mobile3: req.body.mobile3,
-      email4: req.body.email4,
+      email3:  req.body.email3,
+      
       name4: req.body.name4,
       mobile4: req.body.mobile4,
-        password: req.body.password,
+      email4:  req.body.email4,
         college:  req.body.college,
         github:   req.body.github,
         teamname: req.body.teamname
          }
-  
-      User.create(userData, function (error, user) {
-        if (error) {
-          return next(error);
-        } else {
-          
-          req.session.userId = user._id;
-          return res.redirect('/profile');
-        }
-      });
-  
-    } else if (req.body.email && req.body.password) {
-      User.authenticate(req.body.email, req.body.password, function (error, user) {
-        if (error || !user) {
-          var err = new Error('Wrong email or password.');
-          err.status = 401;
-          return next(err);
-        } else {
-          req.session.userId = user._id;
-          return res.redirect('/');
-        }
-      });
-    } else {
-      var err = new Error('All fields required.');
-      err.status = 400;
-      return next(err);
-    }
+
+         var myData = new User(req.body);
+       myData.save()
+       .then(item => {
+        alert('successfully submitted!');
+        
+        res.redirect('/');
+       })
+       .catch(err => {
+         console.log(err);
+       res.status(400).send("unable to save to database");
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
   });
 
 
