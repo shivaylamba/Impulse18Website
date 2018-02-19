@@ -1453,6 +1453,11 @@ transform: scaleX(-1)*/;
   text-transform: uppercase;
 }
 
+#gallery-slider {
+  margin: 0 auto;
+  text-align: center;
+}
+
 #gallery .row {
   margin: 0 -7px;
 }
@@ -1637,6 +1642,7 @@ transform: scaleX(-1)*/;
     text-align: center;
     display: block;
   }
+
 }
 #contacts .item {
   font-size: 18px;
@@ -1648,11 +1654,34 @@ transform: scaleX(-1)*/;
   color: #fff;
   margin-right: 10px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 768px) and (min-width: 460px) {
   #contacts .item {
     font-size: 16px;
   }
 }
+@media (max-width: 460px) and (min-width: 400px) {
+  #contacts .item {
+    font-size: 14px;
+  }
+  #contacts {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 400px) {
+  #contacts {
+    padding:10px 0;
+  }
+  #contacts .item {
+    font-size: 13px;
+    font-weight: 200;
+    /*margin-left: -10px;*/
+  }
+  #contacts .fa {
+    margin-right: 5px;
+  }
+}
+
 /*
 	15. Footer and copyrights
 */
