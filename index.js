@@ -235,15 +235,7 @@ app.post('/uiux', function (req, res, next) {
     if (req.body.email1 &&
       req.body.name1 &&
       req.body.mobile1 &&
-      req.body.email2 &&
-      req.body.name2 &&
-      req.body.mobile2 &&
-      req.body.email3 &&
-      req.body.name3 &&
-      req.body.mobile3 &&
-      req.body.email4 &&
-      req.body.name4 &&
-      req.body.mobile4 &&
+    
       req.body.password &&
       req.body.github &&
       req.body.college 
