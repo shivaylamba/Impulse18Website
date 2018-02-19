@@ -30,6 +30,6 @@ var User2Schema = new mongoose.Schema({
 
 });
 
-var User2 = mongoose.model('UI/UX', User2Schema);
+var User2 = mongoose.model('UIUX', User2Schema);
 module.exports = User2;
 
