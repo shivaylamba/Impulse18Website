@@ -113,11 +113,12 @@ var User4 = require('./models/user_code');
       mobile:   req.body.mobile
        }
 
-       var myData4 = new User2(req.body);
+       var myData4 = new User4(req.body);
        myData4.save()
        .then(item => {
-        alert('successfully submitted!');
-        res.redirect('/');
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
@@ -162,8 +163,9 @@ app.post('/uiux', function (req, res, next) {
       //   popup.alert({
       //     content: 'successfully submitted'
       // });
-      alert('successfully submitted!');
-      res.redirect('/');
+      // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
       // res.send('<script>alert("successfully submitted!")</script>');
   
        })
@@ -208,8 +210,9 @@ app.post('/uiux', function (req, res, next) {
        var myData3 = new User3(req.body);
        myData3.save()
        .then(item => {
-        alert('successfully submitted!');
-        res.redirect('/');
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
        })
        .catch(err => {
        res.status(400).send("unable to save to database");
@@ -285,9 +288,9 @@ app.post('/uiux', function (req, res, next) {
          var myData = new User(req.body);
        myData.save()
        .then(item => {
-        alert('successfully submitted!');
-        
-        res.redirect('/');
+        // alert('successfully submitted!');
+        // res.redirect('/');
+        res.redirect('/success');
        })
        .catch(err => {
          console.log(err);
@@ -304,6 +307,10 @@ app.post('/uiux', function (req, res, next) {
 
   
   // GET route after registering
+  app.get('/success', function(req,res,next){
+    res.render('success.hbs')
+  })
+
   app.get('/profile', function (req, res, next) {
     User.findById(req.session.userId)
       .exec(function (error, user) {
@@ -350,6 +357,6 @@ app.post('/uiux', function (req, res, next) {
   });
   
 // //   module.exports = router;
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 
