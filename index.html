@@ -36,6 +36,17 @@
  </head>
  <body data-spy="scroll" data-offset="120" data-target="#navbar">
 
+	<div class="loader-container">
+		<div class="loader">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+				<div class="bar4"></div>
+				<div class="bar5"></div>
+				<div class="bar6"></div>
+			  </div>
+	</div>		  
+
 <nav class="navbar navbar-expand-lg fixed-top">
 	<a class="navbar-brand" href="#"><img src="/images/impulse-full.png" alt="logo"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -299,7 +310,7 @@
 			Participate in this event or you will lament <br>
 			UI/UX Designing will consist of 2 rounds.</p>
 		  <h4 class="round">ROUND 1</h4>
-		  <p class="round-detail">It will be an online round. The participants need to send their best works.  <br>
+		  <p class="round-detail">It will be an online round. The participants need to send their best works at iosdmait@iosd.tech  <br>
 			Participants with the best work will be selected for Round 2. </p>
 
 			<h4 class="round">Round 2</h4>
@@ -985,8 +996,19 @@ Further details to be disclosed soon.
  International Organisation Of Software Developers</div>
 
 	 </footer>
+	 
 
-     <script src="js/jquery.min.js"></script>
+	 <script src="js/jquery.min.js"></script>
+	 <script>
+		 jQuery('.loader-container').width(window.innerWidth);
+		 jQuery('.loader-container').height(window.innerHeight);
+			 jQuery(window).load(function(){
+			jQuery(".loader-container").fadeOut(500);
+			 });
+		</script>
+		<noscript>
+				<style>.loader-container { display: none; } </style>
+			</noscript>
 	   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
