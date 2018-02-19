@@ -235,8 +235,6 @@ app.post('/uiux', function (req, res, next) {
     if (req.body.email1 &&
       req.body.name1 &&
       req.body.mobile1 &&
-    
-      req.body.password &&
       req.body.github &&
       req.body.college 
       && req.body.teamname  
@@ -255,38 +253,27 @@ app.post('/uiux', function (req, res, next) {
       email4: req.body.email4,
       name4: req.body.name4,
       mobile4: req.body.mobile4,
-        password: req.body.password,
         college:  req.body.college,
         github:   req.body.github,
         teamname: req.body.teamname
          }
   
-      User.create(userData, function (error, user) {
-        if (error) {
-          return next(error);
-        } else {
-          
-          req.session.userId = user._id;
-          return res.redirect('/profile');
-        }
-      });
-  
-    } else if (req.body.email && req.body.password) {
-      User.authenticate(req.body.email, req.body.password, function (error, user) {
-        if (error || !user) {
-          var err = new Error('Wrong email or password.');
-          err.status = 401;
-          return next(err);
-        } else {
-          req.session.userId = user._id;
-          return res.redirect('/');
-        }
-      });
-    } else {
-      var err = new Error('All fields required.');
-      err.status = 400;
-      return next(err);
-    }
+         var myData = new User(req.body);
+       myData.save()
+       .then(item => {
+        alert('successfully submitted!');
+        res.redirect('/');
+       })
+       .catch(err => {
+         console.log(err);
+       res.status(400).send("unable to save to database");
+       });
+  }
+   else {
+    var err = new Error('All fields required.');
+    err.status = 400;
+    return next(err);
+  }
   });
 
 
