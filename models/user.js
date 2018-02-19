@@ -4,7 +4,6 @@ var bcrypt = require('bcrypt');
 var UserSchema = new mongoose.Schema({
   email1: {
     type: String,
-    unique: true,
     required: true,
     trim: true
   },
@@ -18,12 +17,7 @@ var UserSchema = new mongoose.Schema({
     type: String,
     required: true
 },
-email2: {
-  type: String,
-  unique: true,
-  required: false,
-  trim: true
-},
+
 name2: {
   type: String,
   // unique: true,
@@ -34,12 +28,11 @@ mobile2:{
   type: String,
   required: false
 },
-email3: {
-  type: String,
-  unique: true,
-  required: false,
-  trim: true
+email2:{
+type:String,
+required: false
 },
+
 name3: {
   type: String,
   // unique: true,
@@ -50,12 +43,11 @@ mobile3:{
   type: String,
   required: false
 },
-email4: {
-  type: String,
-  unique: true,
-  required: false,
-  trim: true
-},
+email3:{
+  type:String,
+  required: false
+  },
+
 name4: {
   type: String,
   // unique: true,
@@ -66,6 +58,10 @@ mobile4:{
   type: String,
   required: false
 },
+email4:{
+  type:String,
+  required: false
+  },
  
  
   college:{
@@ -85,8 +81,6 @@ mobile4:{
 
 
 });
-
-
 
 var User = mongoose.model('maithacks', UserSchema);
 module.exports = User;
