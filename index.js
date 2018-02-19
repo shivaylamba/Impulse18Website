@@ -3,6 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 const PORT = process.env.PORT || 3000
 var app = express();
+var URI = require('./uri.js');
 // var popup = require('popups');
 alert = require('alert-node');
 
@@ -18,8 +19,8 @@ var MongoStore = require('connect-mongo')(session);
 
 
 // mongoose.connect('mongodb://localhost/impulse');
-// const dburl =  'mongodb://iosdmait:iosdmait12344321@ds239648.mlab.com:39648/impulse18'
-mongoose.connect('mongodb://public:iosdpublic123@ds239648.mlab.com:39648/impulse18');
+
+mongoose.connect(URI.URI);
 var db = mongoose.connection;
 
 // //handle mongo error
