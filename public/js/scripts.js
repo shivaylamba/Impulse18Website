@@ -181,21 +181,76 @@ function initScrollAnimation() {
 
 		sr.reveal('footer li, footer .date, footer .time', scrollTextFade2, 30);
 	}	
-	if ($('#team .person_vinay').length) {
-		sr.reveal('#team .person_vinay img', scrollGalleryIn, 40);
-	}
-	if ($('#team .row1').length) {
-		sr.reveal('#team .row1 img', scrollGalleryIn, 40);
-	}
-	if ($('#team .row2').length) {
-		sr.reveal('#team .row2 img', scrollGalleryIn, 40);
-	}
-	if ($('#team .row3').length) {
-		sr.reveal('#team .row3 img', scrollGalleryIn, 40);
-	}
-	if ($('#team .row4').length) {
-		sr.reveal('#team .row4 img', scrollGalleryIn, 40);
-	}
+	
+$(window).on('resize', function(){
+	var ww = $(window).width()
+	
+		if ($('#team .person_vinay').length) {
+			sr.reveal('#team .person_vinay img', scrollGalleryIn, 40);
+		}
+		if ($('#team .deepali').length) {
+			sr.reveal('#team .deepali img', scrollGalleryIn, 40);
+		}
+		if ($('#team .deepanshi').length) {
+			sr.reveal('#team .deepanshi img', scrollGalleryIn, 40);
+		}
+		if ($('#team .sparsh').length) {
+			sr.reveal('#team .sparsh img', scrollGalleryIn, 40);
+		}
+		if ($('#team .rajat').length) {
+			sr.reveal('#team .rajat img', scrollGalleryIn, 40);
+		}
+		if ($('#team .saurabh').length) {
+			sr.reveal('#team .saurabh img', scrollGalleryIn, 40);
+		}
+		if ($('#team .rishabh').length) {
+			sr.reveal('#team .rishabh img', scrollGalleryIn, 40);
+		}
+		if ($('#team .heena').length) {
+			sr.reveal('#team .heena img', scrollGalleryIn, 40);
+		}
+		if ($('#team .dhruv').length) {
+			sr.reveal('#team .dhruv img', scrollGalleryIn, 40);
+		}
+		if ($('#team .vivek').length) {
+			sr.reveal('#team .vivek img', scrollGalleryIn, 40);
+		}
+		if ($('#team .meghansh').length) {
+			sr.reveal('#team .meghansh img', scrollGalleryIn, 40);
+		}
+		if ($('#team .siddharth').length) {
+			sr.reveal('#team .siddharth img', scrollGalleryIn, 40);
+		}
+		if ($('#team .savitoj').length) {
+			sr.reveal('#team .savitoj img', scrollGalleryIn, 40);
+		}
+		if ($('#team .arjun').length) {
+			sr.reveal('#team .arjun img', scrollGalleryIn, 40);
+		}
+		if ($('#team .rasik').length) {
+			sr.reveal('#team .rasik img', scrollGalleryIn, 40);
+		}
+		if ($('#team .nischay').length) {
+			sr.reveal('#team .nischay img', scrollGalleryIn, 40);
+		}
+		if ($('#team .sachin').length) {
+			sr.reveal('#team .sachin img', scrollGalleryIn, 40);
+		}
+		if ($('#team .jahnavi').length) {
+			sr.reveal('#team .jahnavi img', scrollGalleryIn, 40);
+		}
+		if ($('#team .mudit').length) {
+			sr.reveal('#team .mudit img', scrollGalleryIn, 40);
+		}
+		if ($('#team .deepanshu').length) {
+			sr.reveal('#team .deepanshu img', scrollGalleryIn, 40);
+		}
+		if ($('#team .sarthak').length) {
+			sr.reveal('#team .sarthak img', scrollGalleryIn, 40);
+		}
+	
+
+}).resize();
 
 }
 
