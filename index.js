@@ -166,7 +166,7 @@ app.post('/uiux', function (req, res, next) {
       // });
       // alert('successfully submitted!');
         // res.redirect('/');
-        res.redirect('/success');
+        res.redirect('/uisuccess');
       // res.send('<script>alert("successfully submitted!")</script>');
   
        })
@@ -308,6 +308,9 @@ app.post('/uiux', function (req, res, next) {
 
   
   // GET route after registering
+  app.get('/uisuccess', function(req,res,next){
+    res.render('uisuccess.hbs')
+  })
   app.get('/success', function(req,res,next){
     res.render('success.hbs')
   })
