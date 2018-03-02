@@ -26,12 +26,10 @@
 
 	 <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
-	 
 	 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,700" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
-
 	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 
 
@@ -76,6 +74,9 @@
 		<li class="nav-item">
 		  <a class="nav-link" href="#gallery">Gallery</a>
 		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#" data-toggle="modal" data-target="#theme_gen">Generate Theme</a>
+		  </li>
 		<!-- <li class="nav-item">
 			<a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
 		  </li> -->
@@ -241,6 +242,28 @@
     </div>
   </div>
  -->
+
+ <div class="modal fade modal_type1" id="theme_gen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">MAITHacks Themes</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			<form action="/generate" class="theme_form" method="get">
+				<div class="form-group">
+					<label for="">Enter Your Team Name</label>
+					<input type="text" placeholder="Team Name" class="form-control" style="box-sizing:border-box;" required>
+				</div>
+				<button class="btn btn-success" type="submit">SUBMIT</button>
+			</form>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 <!-- Rulebook Popup -->
 
@@ -1250,7 +1273,7 @@ Further details to be disclosed soon.
 			 </ul>
 <br>
 <div style="color: white; text-align: center;">
-            Made with <i class="fa fa-heart"></i> by <a href="http://iod.tech"></a>IOSD
+            Made with <i class="fa fa-heart"></i> by <a href="http://iosd.tech"></a>IOSD
   </div>
 
 
@@ -1267,7 +1290,7 @@ Further details to be disclosed soon.
 			 jQuery(window).load(function(){
 			jQuery(".loader-container").fadeOut(500);
 			 });
-		</script>
+	</script>
 		<noscript>
 				<style>.loader-container { display: none; } </style>
 			</noscript>

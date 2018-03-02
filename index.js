@@ -305,7 +305,10 @@ app.post('/uiux', function (req, res, next) {
   }
   });
 
-
+  //theme generation route ///////////////////
+  app.get('/generate', function(req,res,next){
+    res.render('theme_gen.hbs')
+  })
   
   // GET route after registering
   app.get('/uisuccess', function(req,res,next){
