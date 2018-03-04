@@ -27,25 +27,25 @@ $(document).on('ready', function() {
         $('div.form4').slideToggle(speed);
 		});
 
-		$('.accordion-item .heading').on('click', function(e) {
-			e.preventDefault();
+		// $('.accordion-item .heading').on('click', function(e) {
+		// 	e.preventDefault();
 	
-			// Add the correct active class
-			if($(this).closest('.accordion-item').hasClass('active')) {
-					// Remove active classes
-					$('.accordion-item').removeClass('active');
-			} else {
-					// Remove active classes
-					$('.accordion-item').removeClass('active');
+		// 	// Add the correct active class
+		// 	if($(this).closest('.accordion-item').hasClass('active')) {
+		// 			// Remove active classes
+		// 			$('.accordion-item').removeClass('active');
+		// 	} else {
+		// 			// Remove active classes
+		// 			$('.accordion-item').removeClass('active');
 	
-					// Add the active class
-					$(this).closest('.accordion-item').addClass('active');
-			}
+		// 			// Add the active class
+		// 			$(this).closest('.accordion-item').addClass('active');
+		// 	}
 	
-			// Show the content
-			var $content = $(this).next();
-			$content.slideToggle(100);
-			$('.accordion-item .content').not($content).slideUp('fast');
+		// 	// Show the content
+		// 	var $content = $(this).next();
+		// 	$content.slideToggle(100);
+		// 	$('.accordion-item .content').not($content).slideUp('fast');
 	});
 	
 		
@@ -70,7 +70,6 @@ $(document).on('ready', function() {
 	// 				}
 	// 		});
 	// });
-});
 
 /* Swiper slider */
 function initSliders() {

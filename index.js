@@ -296,9 +296,13 @@ console.log(req.body.THEME1);
   });
 
 
+
   //theme generation route ///////////////////
   app.get('/generate', function(req,res,next){
-    res.render('theme_gen.hbs')
+    console.log(req.query.team)
+    res.render('theme_gen.hbs', {
+      team: req.query.team
+    })
   })
   
   // GET route after registering
