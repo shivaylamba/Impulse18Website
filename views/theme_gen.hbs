@@ -125,6 +125,18 @@
             machine1.shuffle(5,onComplete);
             machine2.shuffle(5,onComplete);
             $(this).fadeOut('slow');
+            var data = {};
+					data.team = "title";
+					data.THEME1 = "message";
+                    data.THEME2 = "theme2"
+
+              $.ajax({
+                type: 'POST',
+                url: '/theme',
+                data: { THEME1: "someid", THEME2: "someid2",TEAMNAME: "someteamname" }
+       					//	data: JSON.stringify(data),
+
+                });
 
         })
 
