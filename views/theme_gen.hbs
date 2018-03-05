@@ -116,6 +116,7 @@
                 switch(this.element[0].id){
                     case 'machine1':
                     theme1 = "idea" + this.active;
+                    
                      //console.log(theme1);
                         console.log('machine 1: '+this.active);
                         break;
@@ -139,9 +140,11 @@ console.log(team);
 			//		data.team = "title";
 			//		data.THEME1 = "message";
               //      data.THEME2 = "theme2"
-     
-            setTimeout(function(){
-                console.log("themes of " + team + "are : " + theme1 + " , " + theme2);
+    // theme1 = "idea1";theme2 = "idea2";
+            
+            setTimeout( function(){
+             //   console.log("themes of " + team + "are : " + theme1 + " , " + theme2);
+               // await 
                 $.ajax({
                 type: 'POST',
                 url: '/theme',
