@@ -301,10 +301,12 @@ console.log(req.body.THEME1);
        console.log(err);
        //res.send('entered team name does not exist')
      res.status(400).send("unable to save to database");
+     res.send('<script>Team has not been registeed or theme has already been generated</script>');
      });
     } else {
       //IF YOU ARE USING EXPRESS.JS, YOU MUST USE RES.SEND() or RES.END() TO TERMINATE THE CONNECTION
-      res.status(500).send({"message" : "Not Found"});
+      res.status(500).send('<script>Team has not been registeed or theme has already been generated</script>');
+     res.send('<script>Team has not been registeed or theme has already been generated</script>');
       console.log("does not exist");
       return;
     }
