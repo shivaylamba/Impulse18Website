@@ -771,7 +771,7 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
   }
 
   .ques{
-      font-weight: 500;
+      font-weight: 600;
   }
   
   .faq-container ul {
