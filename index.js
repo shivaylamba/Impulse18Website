@@ -41,34 +41,16 @@ app.use(session({
   app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// // var routes = require('./routes/router');
-// // app.use('/', routes);
-
-
-// // catch 404 and forward to error handler
-// app.use(function (req, res, next) {
-//     var err = new Error('File Not Found');
-//     err.status = 404;
-//     next(err);
-//   });
-  
-//   // error handler
-//   // define as the last app.use callback
-//   app.use(function (err, req, res, next) {
-//     res.status(err.status || 500);
-//     res.send(err.message);
-//   });
-
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/assets')));
 // app.use(express.static(__dirname));
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
-    // res.send('hello world');
+
 });
 
-// '/home/sidkathuria14/Desktop/desktop/Impulse18Website'
+
 
 
 app.get('/users',function(req,res){
@@ -77,13 +59,12 @@ res.send('hello');
 
 
 
-//blah blah blah blah
-
 // var router = express.Router();
 var User = require('./models/user');
 var User2 = require('./models/user_ui');
 var User3 = require('./models/user_workshop');
 var User4 = require('./models/user_code');
+var Themes = require('./models/themes');
 
 // var path = require('path');
  //POST route for updating data
@@ -166,7 +147,7 @@ app.post('/uiux', function (req, res, next) {
       // });
       // alert('successfully submitted!');
         // res.redirect('/');
-        res.redirect('/success');
+        res.redirect('/uisuccess');
       // res.send('<script>alert("successfully submitted!")</script>');
   
        })
@@ -246,25 +227,6 @@ app.post('/uiux', function (req, res, next) {
       && req.body.teamname  
     ) {
 
-// if(req.body.name2 == ""){
-//   req.body.name2 = "NA";
-// }
-// if(req.body.name3 == ""){
-//   req.body.name3 = "NA";
-// }
-// if(req.body.name4 == ""){
-//   req.body.name4 = "NA";
-// }
-// if(req.body.mobile2 == ""){
-//   req.body.mobile2 = "NA";
-// }
-// if(req.body.mobile3 == ""){
-//   req.body.mobile3 = "NA";
-// }
-// if(req.body.mobile4 == ""){
-//   req.body.mobile4 = "NA";
-// }
-
       var userData = {
       email1:  req.body.email1,
      name1:  req.body.name1,
@@ -304,10 +266,49 @@ app.post('/uiux', function (req, res, next) {
     return next(err);
   }
   });
+  app.post('/theme', function (req, res, next) {
+    console.log('/post')
+// console.log(req);
+// console.log(req.data.THEME1);
+// req.on('data', function (chunk) {
+//   console.log('GOT DATA!');
+//   console.log(chunk);
+// });
+console.log(req.body.THEME1);
+
+    var themesData = {
+      teamname: req.body.TEAMNAME,
+      theme1: req.body.THEME1,
+      theme2: req.body.THEME2
+    }
+    var themedata = new Themes(themesData);
+    themedata.save()
+    .then(item => {
+      // alert('successfully submitted!');
+      // res.redirect('/');
+      res.redirect('/success');
+     })
+     .catch(err => {
+       console.log(err);
+     res.status(400).send("unable to save to database");
+     });
+
+  });
 
 
+
+  //theme generation route ///////////////////
+  app.get('/generate', function(req,res,next){
+    console.log(req.query.team)
+    res.render('theme_gen.hbs', {
+      team: req.query.team
+    })
+  })
   
   // GET route after registering
+  app.get('/uisuccess', function(req,res,next){
+    res.render('uisuccess.hbs')
+  })
   app.get('/success', function(req,res,next){
     res.render('success.hbs')
   })
@@ -358,6 +359,6 @@ app.post('/uiux', function (req, res, next) {
   });
   
 // //   module.exports = router;
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 8000);
 
 
