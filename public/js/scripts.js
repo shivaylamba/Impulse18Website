@@ -269,7 +269,28 @@ $(window).on('resize', function(){
 		if ($('#team .sarthak').length) {
 			sr.reveal('#team .sarthak img', scrollGalleryIn, 40);
 		}
-	
+		if ($('#team .deepanshu1').length) {
+			sr.reveal('#team .deepanshu1 img', scrollGalleryIn, 40);
+		}
+		if ($('#team .karan').length) {
+			sr.reveal('#team .karan img', scrollGalleryIn, 40);
+		}
+		if ($('#team .harsh').length) {
+			sr.reveal('#team .harsh img', scrollGalleryIn, 40);
+		}
+		if ($('#team .zahid').length) {
+			sr.reveal('#team .zahid img', scrollGalleryIn, 40);
+		}
+		if ($('#team .mayank').length) {
+			sr.reveal('#team .mayank img', scrollGalleryIn, 40);
+		}
+		if ($('#team .raghav').length) {
+			sr.reveal('#team .raghav img', scrollGalleryIn, 40);
+		}
+		if ($('#team .shivani').length) {
+			sr.reveal('#team .shivani img', scrollGalleryIn, 40);
+		}
+	 
 
 }).resize();
 
