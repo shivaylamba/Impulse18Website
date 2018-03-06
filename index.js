@@ -1,3 +1,4 @@
+
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
@@ -275,23 +276,42 @@ app.post('/uiux', function (req, res, next) {
 //   console.log(chunk);
 // });
 console.log(req.body.THEME1);
+//console.log(res);
 
     var themesData = {
       teamname: req.body.TEAMNAME,
       theme1: req.body.THEME1,
       theme2: req.body.THEME2
     }
+
+    mongoose.model('maithacks').findOne({'teamname': req.body.TEAMNAME}, function(error, exist) {
+      if(exist && !error){
+        //do something
+        console.log("exists");
+ 
+
     var themedata = new Themes(themesData);
     themedata.save()
     .then(item => {
       // alert('successfully submitted!');
-      // res.redirect('/');
-      res.redirect('/success');
+     // res.redirect('/');
+    // res.redirect('/uisuccess');
+      console.log("came here");
      })
      .catch(err => {
        console.log(err);
+       //res.send('entered team name does not exist')
      res.status(400).send("unable to save to database");
+     res.send('<script>Team has not been registeed or theme has already been generated</script>');
      });
+    } else {
+      //IF YOU ARE USING EXPRESS.JS, YOU MUST USE RES.SEND() or RES.END() TO TERMINATE THE CONNECTION
+      res.status(500).send('<script>Team has not been registeed or theme has already been generated</script>');
+     res.send('<script>Team has not been registeed or theme has already been generated</script>');
+      console.log("does not exist");
+      return;
+    }
+  });
 
   });
 
@@ -359,6 +379,4 @@ console.log(req.body.THEME1);
   });
   
 // //   module.exports = router;
-app.listen(process.env.PORT || 8000);
-
-
+app.listen(process.env.PORT || 8000); 
