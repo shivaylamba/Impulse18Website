@@ -1,5 +1,58 @@
 $(document).on('ready', function() {
- 
+
+	var march7_1 = new Date(2018,2,7,21)
+	var march7_2 = new Date(2018,2,8)
+	var march8 = new Date(2018,2,8,12)
+	var march9 = new Date(2018,2,10)
+	var march10 = new Date(2018,2,10,14)
+
+	// console.log(march7_1.toString())
+	// console.log(march7_2.toString())
+	// console.log(march8.toString())
+	// console.log(march9.toString())
+	// console.log(march10.toString())
+
+
+	setInterval(function(){
+		if(Date.now()>=march7_1 && Date.now() <= march8)
+			{$('.theme_gen').show();
+			 $('.idea_submit').show();
+			}
+		else if(Date.now() > march8){
+			$('.theme_gen').hide();
+			$('.idea_submit').hide();
+			$('.maithacks_register').hide();
+			
+		}
+		else{
+			$('.theme_gen').hide();
+			$('.idea_submit').hide();
+			
+		}
+
+		if(Date.now() <= march7_2)
+		{
+			$('.pixel_register').show()
+		}else {
+			$('.pixel_register').hide()
+		}
+
+		if(Date.now() <= march9)
+		{
+			$('.codesaga_register').show()
+		}else {
+			$('.codesaga_register').hide()
+		}
+
+		if(Date.now() <= march10)
+		{
+			$('.workshop_register').show()
+		}else {
+			$('.workshop_register').hide()
+		}
+
+	},1000)
+
  	initSliders();
  	initScrollAnimation();
 	 $('.swipebox').swipebox({autoplayVideos: true});

@@ -276,6 +276,7 @@ app.post('/uiux', function (req, res, next) {
 //   console.log(chunk);
 // });
 console.log(req.body.THEME1);
+console.log(req.body.THEME2);
 //console.log(res);
 
     var themesData = {
@@ -296,24 +297,34 @@ console.log(req.body.THEME1);
       // alert('successfully submitted!');
      // res.redirect('/');
     // res.redirect('/uisuccess');
-      console.log("came here");
+      res.status(200).end('success')
      })
      .catch(err => {
        console.log(err);
        //res.send('entered team name does not exist')
-     res.status(400).send("unable to save to database");
-     res.send('<script>Team has not been registeed or theme has already been generated</script>');
+      //  res.writeHead(400, {'Content-Type': 'text/html'})
+      //  res.write("unable to save to database");
+      //  res.end('<p>Team has not been registered or theme has already been generated</p>');
+      res.status(400).end('error')
+      console.log("does not exist");
      });
     } else {
       //IF YOU ARE USING EXPRESS.JS, YOU MUST USE RES.SEND() or RES.END() TO TERMINATE THE CONNECTION
-      res.status(500).send('<script>Team has not been registeed or theme has already been generated</script>');
-     res.send('<script>Team has not been registeed or theme has already been generated</script>');
+    //   res.writeHead(500, {'Content-Type': 'text/html'})
+    //  res.write("unable to save to database");
+    //  res.end('<p>Team has not been registered or theme has already been generated</p>');
+      res.status(400).end('error')
       console.log("does not exist");
-      return;
     }
   });
 
   });
+
+  app.get('/error', function(req,res,next){
+    res.writeHead(200, {'Content-Type': 'text/html'})
+    res.write("unable to save to database");
+    res.end('<p>Team has not been registered or theme has already been generated</p>');
+  })
 
 
 
@@ -379,4 +390,4 @@ console.log(req.body.THEME1);
   });
   
 // //   module.exports = router;
-app.listen(process.env.PORT || 8000); 
+app.listen(process.env.PORT || 3000); 

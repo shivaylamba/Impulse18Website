@@ -1,3 +1,10 @@
+/* RANDOM FIREWORKS ANIMATIONS USING JS AND HTML CANVAS
+*  AUTHOR: MEGHANSH GOEL
+*  COLLEGE: MAIT
+*  GITHUB: https://github.com/meghansh36
+*/
+
+
 var canvas = document.querySelector('canvas');
 canvas.height = window.innerHeight;
 canvas.width = $('body').innerWidth();
