@@ -77,15 +77,9 @@
 		<li class="nav-item">
 		  <a class="nav-link" href="#faq">FAQ</a>
 		 </li>
-		<li class="nav-item">
-			<a class="nav-link" href="#" data-toggle="modal" data-target="#theme_gen">Generate Theme</a>
-		  </li>
 		<!-- <li class="nav-item">
-			<a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
+			<a class="nav-link" href="#" data-toggle="modal" data-target="#theme_gen">Generate Theme</a>
 		  </li> -->
-		<!-- <li class="nav-item"> -->
-		  <!-- <a class="nav-link" href="#form">Register</a> -->
-		<!-- </li> -->
 	  </ul>
 	</div>
   </nav>
@@ -205,8 +199,7 @@
 			<h3>Workshop Begins</h3>
 			<hr>
 			<p>
-				An exciting workshop on trending technologies delivered by industry leaders. <br> <br>
-				Details to be disclosed soon...
+				An exciting workshop on Game Development delivered by industry leaders. <br> <br>
 			</p>
 	</div>
     </div>
@@ -606,18 +599,16 @@ Cyberspace never disappoints anyone !
 
 			</div>
 			<div class="col-md-6  content event4">
-				<span class ="event_header">Workshop</span>
-				<p class = "event_subheader">A session with industry leaders</p>
+				<span class ="event_header">GameDev </span>
+				<p class = "event_subheader">Workshop</p>
 				<p class="event_content">
 					The knowledge we have is never enough..
 					There's always room for more!
-					A WORKSHOP on latest technologies which are in demand in today's market will be conducted on 10th March 2018.
-					It will be a full day workshop with lot's to learn.
-					Registration fees is Rs 100 which is refundable to those who'll attend.
-					We guarantee you won't leave with an empty mind or hand!
-<br><br>
-
-Further details to be disclosed soon.
+					A WORKSHOP on Game Development which is in demand in today's market will be conducted on 10th March 2018.
+					It will be a full day workshop with lot's to learn. <br><br>
+					
+					We guarantee you won't leave with an empty mind or hand! <br><br><br>
+					<span class="event-link form4_trigger" style="cursor: pointer;">REGISTER</span>
 				</p>
 				<!-- <span class="event-link form4_trigger" style="cursor: pointer;">REGISTER</span>
 				<span class="event-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">View RuleBook</span>	 -->
@@ -628,43 +619,37 @@ Further details to be disclosed soon.
 <div class="form4 hide forms">
 	<div class="container">
 		<br>
-		<h3 style="color: #000;">Register for MaitHacks</h3>
+		<h3 style="color: #000;">Register for Workshop</h3>
 
-		<form id = "form3" action="/maithacks" method = "post">
+		<form id = "form3" action="/workshop" method = "post">
 			<input type="hidden" name="_subject" value="code bonanza" />
 		<form>
 
 			<div class="md-form">
-				<i class="fa fa-users prefix grey-text"></i>
-				<input type="text" class="form-control" id="team-name">
-				<label for="team-name">Team Name</label>
-			</div>
-
-			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
-				<input type="text" name = "name" class="form-control" id="name">
-				<label for="name">Your Name</label>
+				<input type="text" name = "name" class="form-control" required id="name">
+				<label for="name">Your Name*</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-envelope prefix grey-text"></i>
-				<input type="text" name = "email"class="form-control" id="email">
-				<label for="email">Your Email</label>
+				<input type="text" name = "email" class="form-control" required id="email">
+				<label for="email">Your Email*</label>
 			</div>
 
 			<div class="md-form">
 				<i class="fa fa-graduation-cap prefix grey-text"></i>
-				<input type="text" name = "college" class="form-control" id="college-name">
-				<label for="college-name">College Name</label>
+				<input type="text" name = "college" class="form-control" required id="college-name">
+				<label for="college-name">College Name*</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-mobile prefix grey-text"></i>
-				<input type="text" name = "mobile" class="form-control" id="mobile">
-				<label for="mobile">Contact Number</label>
+				<input type="text" name = "mobile" class="form-control" required id="mobile">
+				<label for="mobile">Contact Number*</label>
 			</div>
 			<div class="md-form">
 				<i class="fa fa-github prefix grey-text"></i>
-				<input type="text" name = "github" class="form-control" id="github">
-				<label for="github">Github Link</label>
+				<input type="text" name = "github" class="form-control" required id="github">
+				<label for="github">Github Link*</label>
 			</div>
 			<!-- <button class="btn btn-deep-orange" style="cursor: pointer;">Register <i class="fa fa-paper-plane-o ml-1"></i></button> -->
 			<button type="submit" form="form3" value="Submit" class="event-link submit-btn">Submit</button>
@@ -739,27 +724,36 @@ Further details to be disclosed soon.
 		 <!-- <div class="container"> -->
 			 <h3 id = "event_title" style="color:black;">SPONSORS </h3>
 			 <div class="row">
-				 <div class="col-md-3 col-sm-3 col-xs-12 matchHeight">
+				 <div class="col-md-4 col-sm-3 col-xs-12 matchHeight">
 					 <a href="https://www.redcarpetup.com/" target="_blank"><img src="/images/red.png" class="full-width" alt="Sponsor" /></a><br>
 					 <a href="https://www.redcarpetup.com/" target="_blank"><h4 style="color:black;font-family:'Josefin Sans',sans-serif;">Red Carpet</h4></a>
 				 </div>
 
 
-				 <div class="col-md-3 col-sm-3 col-xs-12 matchHeight with_name">
+				 <div class="col-md-4 col-sm-3 col-xs-12 matchHeight with_name">
 					 <a href="http://pixectra.com/" target="_blank"><img src="/images/pixectra_new.png" class="full-width" alt="Sponsor" /></a><br>
 					 <a href="http://pixectra.com/" target="_blank"><h4 style="color:black;font-family:'Josefin Sans',sans-serif;">Pixectra</h4></a>
 				 </div>
 
-				 <div class="col-md-3 col-sm-3 col-xs-12 matchHeight">
+				 <div class="col-md-4 col-sm-3 col-xs-12 matchHeight">
 					 <img src="/images/logo_agro.png" class="full-width" alt="Sponsor" /><br>
 					 <h4 style="color:black;font-family:'Josefin Sans',sans-serif;">Agro Engineering</h4>
 				 </div>
 
 
-				 <div class="col-md-3 col-sm-3 col-xs-12 matchHeight ">
+				 <div class="col-md-4 col-sm-3 col-xs-12 matchHeight ">
 					 <a href="http://jetbrains.com/" target="_blank"><img src="/images/jet_new.png" class="full-width" alt="Sponsor" /></a><br>
 					 <a href="http://jetbrains.com/" target="_blank"><h4 style="color:black;font-family:'Josefin Sans',sans-serif;">JetBrains</h4></a>
 				 </div>
+
+				 <div class="col-md-4 col-sm-3 col-xs-12 matchHeight ">
+					<a href="https://codingblocks.com/" target="_blank"><img src="/images/cblogo.png" class="full-width" alt="Sponsor" /></a><br>
+					<a href="https://codingblocks.com/" target="_blank"><h4 style="color:black;font-family:'Josefin Sans',sans-serif;">Coding Blocks</h4></a>
+				</div>
+				<div class="col-md-4 col-sm-3 col-xs-12 matchHeight ">
+					<a href="https://www.iitr.ac.in/" target="_blank"><img src="/images/iitroorkeelogo.png" class="full-width" alt="Sponsor" /></a><br>
+					<a href="https://www.iitr.ac.in/" target="_blank"><h4 style="color:black;font-family:'Josefin Sans',sans-serif;">IIT Roorkee</h4></a>
+				</div>
 
 			 </div>
 		 </div>
@@ -948,6 +942,44 @@ Further details to be disclosed soon.
 				</div>
 			</div>
 		</div>
+		<br>
+		<h3 class ="team_subhead"> Logistics Head </h3> <br>
+			<div class="photorow row">
+			<div class = "person col col-lg-3 row5 deepanshu1">
+				<img id = "photo" src="/images/team/Deepanshu_opt.jpg"  alt = "Deepanshu" ><p></p>
+					<span id = "personname">Deepanshu Gaur</span>
+			</div>
+			<div class = "person col col-lg-3 row5 harsh">
+				<img id = "photo" src="/images/team/Harsh_opt.jpg"  alt = "harsh" ><p></p>
+					<span id = "personname">Harsh Luthra</span>
+			</div>
+			<div class = "person col col-lg-3 row5 karan">
+				<img id = "photo" src="/images/team/Karan_opt.jpg"  alt = "karan" ><p></p>
+					<span id = "personname">Karan Gupta</span>
+			</div>
+			<div class = "person col col-lg-3 row5 zahid">
+				<img id = "photo" src="/images/team/Zahid_opt.jpg"  alt = "zahid" ><p></p>
+					<span id = "personname">Zahid Akhtar</span>
+			</div>
+			</div>
+
+		<br>
+		<h3 class ="team_subhead"> Crafts Head </h3> <br>
+			<div class="photorow row">
+			<div class = "person col col-lg-4 row5 mayank">
+				<img id = "photo" src="/images/team/Mayank_opt.jpg"  alt = "mayank" ><p></p>
+					<span id = "personname">Mayank Chopra</span>
+			</div>
+			<div class = "person col col-lg-4 row5 raghav">
+				<img id = "photo" src="/images/team/Raghav_opt.jpg"  alt = "Raghav" ><p></p>
+					<span id = "personname"> Raghav Gandhi</span>
+			</div>
+			<div class = "person col col-lg-4 row5 shivani">
+				<img id = "photo" src="/images/team/shivani_opt.jpg"  alt = "shivani" ><p></p>
+					<span id = "personname">Shivani Dalmia</span>
+			</div>
+			
+			</div>
 
 
 	 </section>
@@ -1205,9 +1237,9 @@ Further details to be disclosed soon.
 		</div> -->
 		<div class="faq-container">
 			<h4>Registration Deadlines</h4>
-			<span class="title">MAITHacks</span><span class="title-date">6 March 12 Midnight</span><br>
+			<span class="title">MAITHacks</span><span class="title-date">8 March 12 Noon</span><br>
 			<span class="title">Pixel</span><span class="title-date">7 March 12 Midnight</span><br>
-			<span class="title">CodeSaga</span><span class="title-date">8 March 12 Midnight</span><br>
+			<span class="title">CodeSaga</span><span class="title-date">9 March 12 Midnight</span><br>
 			<ul>
 			<li>
 				<input type="checkbox" checked>
@@ -1229,7 +1261,7 @@ Further details to be disclosed soon.
 				<i></i>
 				<h2>Pixel</h2>
 				<div>
-					<p class="ques">What all soft wares are allowed for the UI/UX competition and do the participants need to bring laptops?</p>
+					<p class="ques">What all softwares are allowed for the UI/UX competition and do the participants need to bring laptops?</p>
 					<p class="ans">Adobe Photoshop, Illustrator or any other relevant software can be used. But we won’t provide any software on the spot. So please bring your own software. Yes, the participants need to carry their own laptops. No computers will be provided on the spot.</p>
 
 					<p class="ques">Is there any preferred theme on which the students need to design for the online round?</p>
@@ -1245,7 +1277,7 @@ Further details to be disclosed soon.
 					<p class="ans">Yes the first round will take place in the college campus itself. Location details will be provided on the spot.  All the details will be provided on the spot. But for solving the questions, as with the first round, the questions can be attempted in any language.</p>
 
 					<p class="ques">Do the participants need to bring their own laptops for the event?</p>
-					<p class="ans"> No, the event will take place in college labs. So there is no need for laptops.  </p>
+					<p class="ans"> No, the event will take place in college labs. So there is no need for laptops. If you bring your own laptops then you have to manage the internet connection on your own.  </p>
 				</div>
 			</li>
 			<li>
@@ -1341,7 +1373,7 @@ Further details to be disclosed soon.
 			 </ul>
 <br>
 <div style="color: white; text-align: center;">
-            Made with <i class="fa fa-heart"></i> by <a href="http://iosd.tech"></a>IOSD
+            Made with <i class="fa fa-heart"></i> by <a href="http://iosd.tech">IOSD</a>
   </div><br><br>
   <img src="/images/iosdmait.png"  style="width:120px;height: auto;">
 

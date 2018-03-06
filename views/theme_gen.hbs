@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,11 +44,14 @@
             font-size: 50px;
             margin-bottom: 30px;
         }
-        .subtext{
+        .subtext, .hidden{
             text-align: center;
             color: rgb(175, 49, 49);
             font-size: 20px;
             margin-bottom: 50px;
+        }
+        .hidden{
+            display: none;
         }
         
     </style>
@@ -94,6 +98,8 @@
             </div>
 
             <button class="btn btn-success" id="randomize">GENERATE</button>
+            <br><br>
+            <p class="hidden">Your topics have been recorded. Submit your ideas before 8 March 12 noon. Get Coding!</p>
         </div>
     </div>
 
@@ -136,6 +142,7 @@ console.log(team);
             machine2.shuffle(5,onComplete);
             //console.log(theme1 + " " + theme2);
             $(this).fadeOut('slow');
+            $('.hidden').fadeIn('fast');
          //   var data = {};
 			//		data.team = "title";
 			//		data.THEME1 = "message";
@@ -150,11 +157,9 @@ console.log(team);
                 url: '/theme',
                 data: { THEME1: theme1, THEME2: theme2,TEAMNAME: team }
        					//	data: JSON.stringify(data),
-                           
 
                 });
-            },6000)
-                
+            },4000)
                 })
                 })
     </script>
