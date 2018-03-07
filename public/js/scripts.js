@@ -21,8 +21,6 @@ $(document).on('ready', function() {
 		else if(Date.now() > march8){
 			$('.theme_gen').hide();
 			$('.idea_submit').hide();
-			$('.maithacks_register').hide();
-			
 		}
 		else{
 			$('.theme_gen').hide();
@@ -33,8 +31,10 @@ $(document).on('ready', function() {
 		if(Date.now() <= march7_2)
 		{
 			$('.pixel_register').show()
+			$('.maithacks_register').show()
 		}else {
 			$('.pixel_register').hide()
+			$('.maithacks_register').hide()
 		}
 
 		if(Date.now() <= march9)
