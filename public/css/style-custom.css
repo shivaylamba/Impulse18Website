@@ -947,6 +947,11 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
         font-size: 13px;
         
     } */
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
+    }
+    
     .timer{
         width: 65%;
         left: 17.5%;
@@ -1018,6 +1023,33 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
         top: 62%;
     }
 }
+
+@media screen and (max-width: 482px){
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
+    }
+
+    .timer{
+        width: 95%;
+        left: 2.5%;
+    }
+    .timer-day,.timer-hour,.timer-minute,.timer-second{
+        font-size: 65px;
+    }
+    .hidden_header{
+        line-height: 50px;
+    }
+    #main_header{
+        font-size: 13vmin;
+        margin-bottom: 10px;
+        top: 48%;
+    }
+    .month{
+        top: 62%;
+    }
+    
+}
 @media screen and (max-width: 420px){
     .timer{
         width: 95%;
@@ -1038,6 +1070,10 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
     .month{
         top: 62%;
     }
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
+    }
 }
 @media screen and (max-width: 414px){
     .navbar-brand img{
@@ -1050,6 +1086,10 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
     }
     .month{
         top: 62%;
+    }
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
     }
     
 }
@@ -1065,6 +1105,10 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
     .month{
         top: 62%;
     }
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
+    }
     
 }
 @media screen and (max-width: 340px){
@@ -1078,6 +1122,10 @@ input[type="date"]:focus:not([readonly]) + label, input[type="datetime-local"]:f
     }
     .month{
         top: 62%;
+    }
+    .idea_submit{
+        display: block;
+        margin-top: 20px;
     }
     
 }
