@@ -2,7 +2,7 @@ $(document).on('ready', function() {
 
 	var march7_1 = new Date(2018,2,7,21)
 	var march7_2 = new Date(2018,2,8)
-	var march8 = new Date(2018,2,8,12)
+	var march8 = new Date(2018,2,8,14)
 	var march8_2 = new Date(2018,2,8,15)
 	var march9 = new Date(2018,2,10)
 	var march10 = new Date(2018,2,10,14)
