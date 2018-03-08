@@ -277,6 +277,7 @@ app.post('/uiux', function (req, res, next) {
 // });
 console.log(req.body.THEME1);
 console.log(req.body.THEME2);
+console.log(req.body.TEAMNAME)
 //console.log(res);
 
     var themesData = {
