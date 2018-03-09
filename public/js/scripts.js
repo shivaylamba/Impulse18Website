@@ -50,7 +50,7 @@ $(document).on('ready', function() {
 			$('.codesaga_register').hide()
 		}
 
-		if(Date.now() <= march10)
+		if(Date.now() <= march9)
 		{
 			$('.workshop_register').show()
 		}else {
