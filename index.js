@@ -4,7 +4,7 @@ const path = require('path')
 const hbs = require('hbs')
 const PORT = process.env.PORT || 3000
 var app = express();
-var URI = require('./uri.js');
+//var URI = require('./uri.js');
 // var popup = require('popups');
 alert = require('alert-node');
 
@@ -21,7 +21,7 @@ var MongoStore = require('connect-mongo')(session);
 
 // mongoose.connect('mongodb://localhost/impulse');
 
-mongoose.connect(URI.URI);
+mongoose.connect('mongodb://impulse:impulse2019@ds221095.mlab.com:21095/impulse');
 var db = mongoose.connection;
 
 // //handle mongo error
